@@ -1,0 +1,26 @@
+#+title: awfulbytes
+#+AUTHOR: goodvibrations32
+#+OPTIONS: \n:t
+
+* a untunable oscillator for sonic explorations
+Even the spell checker needs a dash there to understand what I'm making but let me explain...
+What if you had a monophonic source that is _untunable to musical standards_ with a side effect of *sounding different*.
+
+This is the goal of this project.
+
+* why untunable though?
+The basic reason could be traced back to skill issues but I will defend my self a bit. There is nobody to help (/except some online resources)/ or teach you how to construct musical instruments so the idea is using the available information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.
+** the online resources
+So if there is online material which is it and where? The list can be changed but the order will be with importance.
+- [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/education/][Mutable Instruments Education chapter]]
+  This is how I became aware of the possibility to manufacture something.
+- [[https://github.com/pichenettes/eurorack][Mutable Instruments source code]]
+  The best book is someone's production code and there is no better codebase.
+
+There will be more but those can get anyone informed without obliterating with diagrams and spec-sheets. 
+
+* contact info
+** irc/email
+- \#awfulbytes
+  on -> irc <dot> libera <dot> chat
+- goodvibrations32 <at> awfulbytes <dot> org
