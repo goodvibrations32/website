@@ -1,0 +1,80 @@
+html, body{ 
+    background: #062329;  
+    color: #D1B897;
+    scrollbar-color: #8cde94 #062329;
+}
+
+h2, h3, h4, h5{
+    color: #ffffff;
+}
+
+h1, p{
+    color: #D1B897;
+}
+
+a:link{
+    color: #00FFFF;
+}
+
+a:hover{
+    color: #8CDE94;
+}
+
+a:visited{
+    color: #C1D1E3;
+}
+
+/* code */
+pre, code{
+    background: #062329;
+    overflow: scroll;
+}
+pre{
+    border: 2px solid #8cde94;
+    scrollbar-color: #8cde94 #062329;
+}
+pre code{
+    background: #062329;
+    scrollbar-color: #8cde94 #062329;
+}
+
+pre span.org-string                      {color:#42A637;}
+pre span.org-keyword                     {color:#ffffff;}
+pre span.org-variable-name               {color:#C1D1E3;}
+pre span.org-function-name               {color:#ffffff;}
+pre span.org-type                        {color:#8CDE94;}
+pre span.org-preprocessor                {color:#8CDE94;font-weight:bold;}
+pre span.org-constant                    {color:#D0372D;}
+pre span.org-comment-delimiter           {color:#42A637;}
+
+*::selection{
+    background: #0000f0;
+    color: #ffffff;
+    font-weight: bold;
+}
+*::-moz-selection{
+    background: #0000f0;
+    color: #ffffff;
+    font-weight: bold;
+}
+*::-webkit-selection{
+    background: #0000f0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: #8cde94;
+    text-decoration: none;
+    display: block;
+    padding-right: 22px;
+    text-align: center;
+}
+.navbar li{
+    float: left;
+}

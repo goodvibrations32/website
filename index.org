@@ -1,7 +1,7 @@
 #+title: awfulbytes
 #+AUTHOR: goodvibrations32
 #+OPTIONS: \n:t
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+#+INCLUDE: style_and_nav.org
 
 * a untunable oscillator for sonic explorations
 Even the spell checker needs a dash there to understand what I'm making but let me explain...
@@ -10,7 +10,9 @@ What if you had a monophonic source that is _untunable to musical standards_ wit
 This is the goal of [[./about.org][this project]].
 
 * why untunable though?
-The basic reason could be traced back to skill issues but I will defend my self a bit. There are no guides (/except some online resources)/ or a clear distinct way to manufacture complied electronic instruments due to trademarked and copyrighted information for circuits but also because of the amount of money to comply with regulations have made most of the companies (including us) not to disclose part of the machine. So the idea is using the available information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.
+The basic reason could be traced back to skill issues but I will defend my self a bit. There are no guides (/except some online resources)/ or a clear distinct way to manufacture complied electronic instruments due to trademarked and copyrighted information for circuits but also the amount of money to comply with regulations have made most of the companies (including us) not to disclose part of the machines. So the idea is using the available online information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.
+
+Something that stands between a DDS and a full VCO. You have the power of filling the flash with LUTs, while amplification and negative voltages happen in the analog domain. The idea and inspiration along with some code snippets and the exposure to embedded programming habits came from Mutable Instruments and the publicly available material of his. Thanx for all pichenettes.
 
 There is information and I will make my best to have some starting points here but is sparse and most of it is collectively acquired, on places like [[https://www.modwiggler.com/][modwiggler]], [[https://musicfromouterspace.com/][MFOS]], currently maintained by [[https://synthcube.com/][synthCube]], and promised to leave them like that for the next rounds of makers. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN's and PNP's in arrangements). If all these words are vaguely familiar you can start from the first link [[online resources][here]].
 ** online resources
@@ -26,8 +28,5 @@ So if there is online material which is it and where? The list can be changed bu
 
 There will be more but those can get anyone informed without obliterating with diagrams and spec-sheets. 
 
-* contact info
-** irc/email
-- #awfulbytes
-  on: irc <dot> libera <dot> chat
-- goodvibrations32 <at> awfulbytes <dot> org
+
+

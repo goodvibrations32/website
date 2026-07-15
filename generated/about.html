@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>awfulbytes</title>
+<title>about us</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -196,72 +196,66 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">awfulbytes</h1>
-<div id="outline-container-org99529d2" class="outline-2">
-<h2 id="org99529d2">a untunable oscillator for sonic explorations</h2>
-<div class="outline-text-2" id="text-org99529d2">
-<p>
-Even the spell checker needs a dash there to understand what I&rsquo;m making but let me explain&hellip;<br />
-What if you had a monophonic source that is <span class="underline">untunable to musical standards</span> with a side effect of <b>sounding different</b>.<br />
-</p>
-
-<p>
-This is the goal of <a href="./about.html">this project</a>.<br />
-</p>
-</div>
-</div>
-<div id="outline-container-orgf746cc9" class="outline-2">
-<h2 id="orgf746cc9">why untunable though?</h2>
-<div class="outline-text-2" id="text-orgf746cc9">
-<p>
-The basic reason could be traced back to skill issues but I will defend my self a bit. There are no guides (<i>except some online resources)</i> or a clear distinct way to manufacture complied electronic instruments due to trademarked and copyrighted information for circuits but also because of the amount of money to comply with regulations have made most of the companies (including us) not to disclose part of the machine. So the idea is using the available information acquired from decades of studying and manufacturing tunable <span class="underline">non musical</span> oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.<br />
-</p>
-
-<p>
-There is information and I will make my best to have some starting points here but is sparse and most of it is collectively acquired, on places like <a href="https://www.modwiggler.com/">modwiggler</a>, <a href="https://musicfromouterspace.com/">MFOS</a>, currently maintained by <a href="https://synthcube.com/">synthCube</a>, and promised to leave them like that for the next rounds of makers. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN&rsquo;s and PNP&rsquo;s in arrangements). If all these words are vaguely familiar you can start from the first link <a href="#org04ab9d1">here</a>.<br />
-</p>
-</div>
-<div id="outline-container-org04ab9d1" class="outline-3">
-<h3 id="org04ab9d1">online resources</h3>
-<div class="outline-text-3" id="text-org04ab9d1">
-<p>
-So if there is online material which is it and where? The list can be changed but the order will be with importance. I found that would be better if I didn&rsquo;t list books and studies I read but the resources that led me to those books and leave up to you to read and criticize them making your own path.<br />
-</p>
-<ul class="org-ul">
-<li><a href="https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/education/">Mutable Instruments Education chapter</a><br />
-This is how I became aware of the possibility to manufacture something. There is a clean and difficulty order skill set explained.<br /></li>
-<li><a href="https://github.com/pichenettes/eurorack">Mutable Instruments source code</a><br />
-The best book is someone&rsquo;s production code and there is no better codebase.<br /></li>
-<li><a href="https://www.reaperworld.com/">Gary Kramlich</a>, <a href="https://down2core.com/">yaspr</a><br />
-If programming in systems languages is not a known subject<br />
-I will let them introduce their selves but it&rsquo;s worth checking out their corners on the net.<br />
-<b>Gary</b> thanx for let me know about Meson and <b>yaspr</b> thanx for messing around with assembly while I&rsquo;m working.<br /></li>
+<h1 class="title">about us</h1>
+<nav class="navbar">
+<ul>
+<li><a href="index.html">home</a></li>
+<li><a href="about.html">about</a></li>
 </ul>
+</nav>
+<p>
+&ldquo;Us&rdquo; is a bit overstating the situation. Currently it&rsquo;s only me but the plan is to create a place where development and manufacture of personal &ldquo;one item&rdquo; products for your electronic collection of musical instruments and form-factor it as you want. There is a Eurorack System format currently at a pre-production stage with the ambition to get it mass produced.<br />
+</p>
 
 <p>
-There will be more but those can get anyone informed without obliterating with diagrams and spec-sheets.<br />
+My name is Nick, a Mechanical Engineer whose love for programming started late. My bachelor thesis involved signal post-processing for EMI filtering from electric motors used in the experimental setup. I was lucky enough to have a diverse curriculum and among them were basic IoT device building on a simulator, a punching tool on a lathe <b>with knurling</b> now gifted to a friend and other interesting stuff. My thesis supervisor, <i>whom I have to kindly ask for naming him here</i>, created the turning point and let me explore the early stages of programming helping a lot to untangle the thread of implementing signal processing with the help of other libraries where python wasn&rsquo;t fast enough (hey scipy, it&rsquo;s been a while).<br />
 </p>
+
+<p>
+Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu&rsquo;s which are getting overlooked. <a href="https://bogdanthegeek.github.io/blog/projects/vapeserver/">A cortex-m0+ can host a website</a> so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx&rsquo;s among <a href="https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/">other reasons</a>.<br />
+</p>
+<div id="outline-container-org94f8dac" class="outline-2">
+<h2 id="org94f8dac">and this is our coding style</h2>
+<div class="outline-text-2" id="text-org94f8dac">
+<div class="org-src-container">
+<pre class="src src-C"><code><span style="color: #ffffff;">static</span> <span style="color: #ffffff;">inline</span> <span style="color: #8cde94;">bool</span> <span style="color: #ffffff;">read_gpio</span>(<span style="color: #ffffff;">struct</span> <span style="color: #8cde94;">gpio</span> *<span style="color: #c1d1e3;">g</span>){
+    <span style="color: #ffffff;">return</span> (pin-&gt;port_id-&gt;IDR &amp; (1U &lt;&lt; pin-&gt;id) ? 1U : 0);
+}
+<span style="color: #8cde94;">int</span> <span style="color: #ffffff;">main</span>(<span style="color: #8cde94;">void</span>){
+    <span style="color: #44b340;">/* </span><span style="color: #44b340;">there is a struct gpio my_beautiful_pin_struct somewhere declared and initialized here before this call</span><span style="color: #44b340;"> */</span>
+    <span style="color: #8cde94;">uint32_t</span> <span style="color: #c1d1e3;">some</span> = read_gpio(&amp;my_beautiful_pin_struct);
+    <span style="color: #ffffff;">return</span> 0;
+}
+</code></pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgda224cf" class="outline-2">
-<h2 id="orgda224cf">contact info</h2>
-<div class="outline-text-2" id="text-orgda224cf">
+<div id="outline-container-org6b83f98" class="outline-2">
+<h2 id="org6b83f98">contact info</h2>
+<div class="outline-text-2" id="text-org6b83f98">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">irc.libera.chat</th>
+<th scope="col" class="org-left">email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">#awfulbytes</td>
+<td class="org-left">goodvibrations32 &lt;at&gt; awfulbytes &lt;dot&gt; org</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="outline-container-org65d83eb" class="outline-3">
-<h3 id="org65d83eb">irc/email</h3>
-<div class="outline-text-3" id="text-org65d83eb">
-<ul class="org-ul">
-<li>#awfulbytes<br />
-on: irc &lt;dot&gt; libera &lt;dot&gt; chat<br /></li>
-<li>goodvibrations32 &lt;at&gt; awfulbytes &lt;dot&gt; org<br /></li>
-</ul>
 </div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.8.6)</p>
 </div>
 </body>
 </html>

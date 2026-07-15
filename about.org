@@ -1,8 +1,25 @@
 #+title: about us
 #+OPTIONS: \n:t
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+#+INCLUDE: style_and_nav.org
 "Us" is a bit overstating the situation. Currently it's only me but the plan is to create a place where development and manufacture of personal "one item" products for your electronic collection of musical instruments and form-factor it as you want. There is a Eurorack System format currently at a pre-production stage with the ambition to get it mass produced. 
 
-My name is Nick, a Mechanical Engineer whose love for programming started late. My Bachelor thesis involved signal post-processing for EMI filtering and noise canceling from environmental interference. I was lucky enough to have a diverse curriculum and among them were basic IoT device building on a simulator, a punching tool on a lathe and other cool and interesting stuff. My thesis supervisor, who I have to kindly ask for naming him here, created the turning point and let me explore the early stages of programming helping a lot to untangle the thread of implementing signal processing with the help of other libraries where python wasn't fast enough (hey scipy, it's been a while).
+My name is Nick, a Mechanical Engineer whose love for programming started late. My bachelor thesis involved signal post-processing for EMI filtering from electric motors used in the experimental setup. I was lucky enough to have a diverse curriculum and among them were basic IoT device building on a simulator, a punching tool on a lathe *with knurling* now gifted to a friend and other interesting stuff. My thesis supervisor, /whom I have to kindly ask for naming him here/, created the turning point and let me explore the early stages of programming helping a lot to untangle the thread of implementing signal processing with the help of other libraries where python wasn't fast enough (hey scipy, it's been a while).
 
 Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu's which are getting overlooked. [[https://bogdanthegeek.github.io/blog/projects/vapeserver/][A cortex-m0+ can host a website]] so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx's among [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/][other reasons]].
+
+* and this is our coding style
+#+begin_src C
+static inline bool read_gpio(struct gpio *g){
+    return (pin->port_id->IDR & (1U << pin->id) ? 1U : 0);
+}
+int main(void){
+    /* there is a struct gpio my_beautiful_pin_struct somewhere declared and initialized here before this call */
+    uint32_t some = read_gpio(&my_beautiful_pin_struct);
+    return 0;
+}
+#+end_src
+
+* contact info
+| irc.libera.chat | email                                      |
+|-----------------+--------------------------------------------|
+| #awfulbytes     | goodvibrations32 <at> awfulbytes <dot> org |

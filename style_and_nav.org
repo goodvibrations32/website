@@ -1,0 +1,9 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+#+HTML: <nav class="navbar">
+#+HTML:   <ul>
+#+HTML:     <li><a href="index.html">home</a></li>
+#+HTML:     <li><a href="about.html">about</a></li>
+#+HTML:   </ul>
+#+HTML: </nav>
+
