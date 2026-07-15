@@ -1,19 +1,22 @@
 #+title: awfulbytes
 #+AUTHOR: goodvibrations32
 #+OPTIONS: \n:t
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 
 * a untunable oscillator for sonic explorations
 Even the spell checker needs a dash there to understand what I'm making but let me explain...
 What if you had a monophonic source that is _untunable to musical standards_ with a side effect of *sounding different*.
 
-This is the goal of this project.
+This is the goal of [[./about.org][this project]].
 
 * why untunable though?
-The basic reason could be traced back to skill issues but I will defend my self a bit. There is nobody to help (/except some online resources)/ or teach you how to construct musical instruments so the idea is using the available information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.
-** the online resources
+The basic reason could be traced back to skill issues but I will defend my self a bit. There are no guides (/except some online resources)/ or a clear distinct way to manufacture complied electronic instruments due to trademarked and copyrighted information for circuits but also because of the amount of money to comply with regulations have made most of the companies (including us) not to disclose part of the machine. So the idea is using the available information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.
+
+There is information and I will make my best to have some starting points here but is sparse and most of it is collectively acquired, on places like [[https://www.modwiggler.com/][modwiggler]], [[https://musicfromouterspace.com/][MFOS]], currently maintained by [[https://synthcube.com/][synthCube]], and promised to leave them like that for the next rounds of makers. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN's and PNP's in arrangements). If all these words are vaguely familiar you can start from the first link [[online resources][here]].
+** online resources
 So if there is online material which is it and where? The list can be changed but the order will be with importance. I found that would be better if I didn't list books and studies I read but the resources that led me to those books and leave up to you to read and criticize them making your own path.
 - [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/education/][Mutable Instruments Education chapter]]
-  This is how I became aware of the possibility to manufacture something.
+  This is how I became aware of the possibility to manufacture something. There is a clean and difficulty order skill set explained.
 - [[https://github.com/pichenettes/eurorack][Mutable Instruments source code]]
   The best book is someone's production code and there is no better codebase.
 - [[https://www.reaperworld.com/][Gary Kramlich]], [[https://down2core.com/][yaspr]]
@@ -25,6 +28,6 @@ There will be more but those can get anyone informed without obliterating with d
 
 * contact info
 ** irc/email
-- \#awfulbytes
-  on -> irc <dot> libera <dot> chat
+- #awfulbytes
+  on: irc <dot> libera <dot> chat
 - goodvibrations32 <at> awfulbytes <dot> org
