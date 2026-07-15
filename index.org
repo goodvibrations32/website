@@ -11,11 +11,15 @@ This is the goal of this project.
 * why untunable though?
 The basic reason could be traced back to skill issues but I will defend my self a bit. There is nobody to help (/except some online resources)/ or teach you how to construct musical instruments so the idea is using the available information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.
 ** the online resources
-So if there is online material which is it and where? The list can be changed but the order will be with importance.
+So if there is online material which is it and where? The list can be changed but the order will be with importance. I found that would be better if I didn't list books and studies I read but the resources that led me to those books and leave up to you to read and criticize them making your own path.
 - [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/education/][Mutable Instruments Education chapter]]
   This is how I became aware of the possibility to manufacture something.
 - [[https://github.com/pichenettes/eurorack][Mutable Instruments source code]]
   The best book is someone's production code and there is no better codebase.
+- [[https://www.reaperworld.com/][Gary Kramlich]], [[https://down2core.com/][yaspr]]
+  If programming in systems languages is not a known subject
+  I will let them introduce their selves but it's worth checking out their corners on the net.
+  *Gary* thanx for let me know about Meson and *yaspr* thanx for messing around with assembly while I'm working.
 
 There will be more but those can get anyone informed without obliterating with diagrams and spec-sheets. 
 
