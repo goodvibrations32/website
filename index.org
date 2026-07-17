@@ -7,7 +7,7 @@ Even the spell checker needs a dash there to understand what I'm making but let 
 What if you had a monophonic source that is _untunable to musical standards_ with a side effect of *sounding different*.
 
 * why untunable though?
-The basic reason could be traced back to skill issues but I will defend my self a bit. There are no guides (/except some online resources)/ or a clear distinct way to manufacture _complied_ electronic instruments due to trademarked and copyrighted information for circuits but also the amount of money to comply with regulations (CE, FCC certs) have made most of the companies not to disclose part of the machines. So the idea is using the available online information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.
+The basic reason could be traced back to skill issues but I will defend my self a bit. There are no guides (/except some online resources)/ or a clear distinct way to manufacture _complied_ electronic instruments due to trademarked and copyrighted information for circuits but also the amount of money to comply with regulations (CE, FCC certs) have made most of the companies not to disclose part of the machines. So the idea is using the available online information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments. The why's and how's [[file:./oscillator.org][here]].
 
-This is the goal of [[./about.org][this project]]. The why's and how's [[file:./oscillator.org][here]].
+This is the goal of [[./about.org][this project]].
 
