@@ -1,0 +1,24 @@
+#+title: oscillator
+#+OPTIONS: \n:t title:nil
+#+include: style_and_nav.org
+@@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
+* the untunable part
+Something that stands between a DDS and a VCO. You can't call it tunable by musical standards but there is adequate frequency bandwidth to produce audible waveforms. You have the power of filling the flash with LUTs, while amplification and negative voltages happen in the analog domain. The idea and inspiration along with some code snippets and the exposure to embedded programming habits came from Mutable Instruments and the publicly available material of his. Thanx for all pichenettes.
+
+** but why?
+Digitization of music and "perfect tuning" has removed the possibility to recognize the production year of a record after the [[https://en.wikipedia.org/wiki/Loudness_war][loudness war]]. Mastering people do what they can but giving them midi sequences does not provide them with much. Producing those /lightly detuned/ frequencies in conjunction with tuned sources of sound (/obviously/) is one way to get back to actual experiments in electronic music.
+
+The same applies to components of an instrument. Using them in unconventional ways exposes interesting behaviors.
+I'm not proposing unstable wobbly controls and overdriving circuits just to hide bad quality parts, but sound generators not constrained at a tempering scale or forced to conform with a tuning system. There are plenty thoughtfull designs addressing tuning either with V/OCT inputs on analog chips and midi-capable oscillators so the spectrum is full. Slowly the chips are getting so much faster and the new thing is menu driven embedded systems with SOC's on a Eurorack Module. [[https://busycircuits.com/pages/alm042][Cizzle]] from ALM has chords but also a nice phase distortion and [[https://ornament-and-cri.me/][ornament & Crime]] is basically a Control Voltage arbitrary generator.
+
+Recently watching an old interview from Frank Zappa a comment for guitar solo's got me thinking. He pointed how much music had been commercialized (at 1984) and due to that guitar solo's where all prerecorded. He didn't prerecord any solo. Instead he knew "roughly how long he's got" and he has to decorate a piece of time (the [[https://www.youtube.com/watch?v=Eln3J6BxWN0][full interview]] is really worth it). I need those solos in electronic music so this instrument will try to bring those back.
+* code and pcb's
+A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments' designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as [[https://miniaud.io/][miniaudio]], [[https://www.dafx.de/DAFX_Book_Page/][DAFX]] but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader. The code [[https://github.com/awfulbytes/experiments][lives here for now]] but plans for better hosting are coming soon.
+** code
+The development is happening on the open. This means that I rebase master and break stuff during that phase. The main structure and idea of what the machine will be capable of is there but polishing and final touches aren't.
+
+Currently I'm testing the circuit on a breadboard with cables all around. *Documentation is not existing for now* but variable names are long and descriptive and there is *no hidden pointers in typedefs*. What you see on a declaration of a function is the actual argument passed. Structures are storing all the information used by a specific part in the codebase. NCO stuff are handled in _nco.c/h_ and so on. All data are globally initialized with their startup/default values in a manual way in _interrupter.h_ and _interrupter.c_ hosts the entry point *main()*. All modification for changing modes and frequency (the "misleadingly" named *tune(...)* function) and higher level procedures are in _overseer.c/h_. I can continue but you get the idea of how the project is organized from viewing the folders there are no 3k LOC generated files so you could read!
+
+As a build system [[https://mesonbuild.com][Meson]] for simplicity, a Makefile could be also adequate (we just compile files and link them together) but Meson handles cross-compilation nicely so we ended up here.
+** schematics and pcb design
+We will make the schematics available for everyone but pcb design and signal integrity are difficult to understand and sustaining a business around free material is hard by design. So anyone could build a PCB but supply chains and sourcing has become a draining process in the beginning. We will make our best to select parts that are not at the sunfall of their life but we can do only as much.

@@ -196,14 +196,16 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">about us</h1>
 <nav class="navbar">
 <ul>
 <li><a href="index.html">home</a></li>
+<li><a href="projects.html">projects</a></li>
 <li><a href="about.html">about</a></li>
 </ul>
 </nav>
+<hr />
 <p>
+<h1 class="title">about us</h1><br />
 &ldquo;Us&rdquo; is a bit overstating the situation. Currently it&rsquo;s only me but the plan is to create a place where development and manufacture of personal &ldquo;one item&rdquo; products for your electronic collection of musical instruments and form-factor it as you want. There is a Eurorack System format currently at a pre-production stage with the ambition to get it mass produced.<br />
 </p>
 
@@ -212,11 +214,11 @@ My name is Nick, a Mechanical Engineer whose love for programming started late. 
 </p>
 
 <p>
-Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu&rsquo;s which are getting overlooked. <a href="https://bogdanthegeek.github.io/blog/projects/vapeserver/">A cortex-m0+ can host a website</a> so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx&rsquo;s among <a href="https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/">other reasons</a>.<br />
+Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu&rsquo;s which are getting overlooked. <a href="https://bogdanthegeek.github.io/blog/projects/vapeserver/">A cortex-m0+ can host a website</a> so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx&rsquo;s so these where found to suite the needs of the project among <a href="https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/">other reasons</a> without skyrocketing the price for the mcu&rsquo;s.<br />
 </p>
-<div id="outline-container-org94f8dac" class="outline-2">
-<h2 id="org94f8dac">and this is our coding style</h2>
-<div class="outline-text-2" id="text-org94f8dac">
+<div id="outline-container-org17ffa2b" class="outline-2">
+<h2 id="org17ffa2b">and this is our coding style</h2>
+<div class="outline-text-2" id="text-org17ffa2b">
 <div class="org-src-container">
 <pre class="src src-C"><code><span style="color: #ffffff;">static</span> <span style="color: #ffffff;">inline</span> <span style="color: #8cde94;">bool</span> <span style="color: #ffffff;">read_gpio</span>(<span style="color: #ffffff;">struct</span> <span style="color: #8cde94;">gpio</span> *<span style="color: #c1d1e3;">g</span>){
     <span style="color: #ffffff;">return</span> (pin-&gt;port_id-&gt;IDR &amp; (1U &lt;&lt; pin-&gt;id) ? 1U : 0);
@@ -230,9 +232,44 @@ Then it was about time to transfer all this knowledge to more constrained enviro
 </div>
 </div>
 </div>
-<div id="outline-container-org6b83f98" class="outline-2">
-<h2 id="org6b83f98">contact info</h2>
-<div class="outline-text-2" id="text-org6b83f98">
+<div id="outline-container-org785eeef" class="outline-2">
+<h2 id="org785eeef">online starting points</h2>
+<div class="outline-text-2" id="text-org785eeef">
+<p>
+There is information and I will make my best to have some of them here but it is sparse and most of it collectively acquired, on places like <a href="https://www.modwiggler.com/">modwiggler</a> and <a href="https://musicfromouterspace.com/">MFOS</a>, currently maintained by <a href="https://synthcube.com/">synthCube</a>, but also generic technical questions will be found at <a href="https://www.eevblog.com/forum/">EEVblog</a>. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN&rsquo;s and PNP&rsquo;s in arrangements). If all these words are vaguely familiar you can start from the first link <a href="#org3c973d5">here</a>.<br />
+</p>
+</div>
+<div id="outline-container-org3c973d5" class="outline-3">
+<h3 id="org3c973d5">resources</h3>
+<div class="outline-text-3" id="text-org3c973d5">
+<p>
+The list can be changed but the order will be with importance. I found that would be better if I didn&rsquo;t list books and studies I read but the resources that led me to those books and leave up to you to read and criticize them making your own path.<br />
+</p>
+<ul class="org-ul">
+<li>Eurorack Systems<br />
+<ul class="org-ul">
+<li><a href="https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/education/">Mutable Instruments Education chapter</a><br />
+This is how I became aware of the possibility to manufacture something. There is a clean and difficulty order skill set explained.<br /></li>
+<li><a href="https://github.com/pichenettes/eurorack">Mutable Instruments source code</a><br />
+The best book is someone&rsquo;s production code and there is no better codebase.<br /></li>
+</ul></li>
+<li>people<br />
+<ul class="org-ul">
+<li><a href="https://www.reaperworld.com/">Gary Kramlich</a>, <a href="https://down2core.com/">yaspr</a><br />
+If programming in systems languages is not a known subject<br />
+I will let them introduce their selves but it&rsquo;s worth checking out their corners on the net.<br />
+<b>Gary</b> thanx for let me know about Meson and <b>yaspr</b> thanx for messing around with assembly while I&rsquo;m working.<br /></li>
+</ul></li>
+</ul>
+<p>
+There will be more but give me some time™.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7dd0679" class="outline-2">
+<h2 id="org7dd0679">contact info</h2>
+<div class="outline-text-2" id="text-org7dd0679">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 

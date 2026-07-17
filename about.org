@@ -1,11 +1,12 @@
 #+title: about us
-#+OPTIONS: \n:t
+#+OPTIONS: \n:t title:nil
 #+INCLUDE: style_and_nav.org
+@@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
 "Us" is a bit overstating the situation. Currently it's only me but the plan is to create a place where development and manufacture of personal "one item" products for your electronic collection of musical instruments and form-factor it as you want. There is a Eurorack System format currently at a pre-production stage with the ambition to get it mass produced. 
 
 My name is Nick, a Mechanical Engineer whose love for programming started late. My bachelor thesis involved signal post-processing for EMI filtering from electric motors used in the experimental setup. I was lucky enough to have a diverse curriculum and among them were basic IoT device building on a simulator, a punching tool on a lathe *with knurling* now gifted to a friend and other interesting stuff. My thesis supervisor, /whom I have to kindly ask for naming him here/, created the turning point and let me explore the early stages of programming helping a lot to untangle the thread of implementing signal processing with the help of other libraries where python wasn't fast enough (hey scipy, it's been a while).
 
-Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu's which are getting overlooked. [[https://bogdanthegeek.github.io/blog/projects/vapeserver/][A cortex-m0+ can host a website]] so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx's among [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/][other reasons]].
+Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu's which are getting overlooked. [[https://bogdanthegeek.github.io/blog/projects/vapeserver/][A cortex-m0+ can host a website]] so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx's so these where found to suite the needs of the project among [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/][other reasons]] without skyrocketing the price for the mcu's.
 
 * and this is our coding style
 #+begin_src C
@@ -18,7 +19,21 @@ int main(void){
     return 0;
 }
 #+end_src
-
+* online starting points
+There is information and I will make my best to have some of them here but it is sparse and most of it collectively acquired, on places like [[https://www.modwiggler.com/][modwiggler]] and [[https://musicfromouterspace.com/][MFOS]], currently maintained by [[https://synthcube.com/][synthCube]], but also generic technical questions will be found at [[https://www.eevblog.com/forum/][EEVblog]]. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN's and PNP's in arrangements). If all these words are vaguely familiar you can start from the first link [[resources][here]].
+** resources
+The list can be changed but the order will be with importance. I found that would be better if I didn't list books and studies I read but the resources that led me to those books and leave up to you to read and criticize them making your own path.
+- Eurorack Systems
+  - [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/education/][Mutable Instruments Education chapter]]
+    This is how I became aware of the possibility to manufacture something. There is a clean and difficulty order skill set explained.
+  - [[https://github.com/pichenettes/eurorack][Mutable Instruments source code]]
+    The best book is someone's production code and there is no better codebase.
+- people
+  - [[https://www.reaperworld.com/][Gary Kramlich]], [[https://down2core.com/][yaspr]]
+    If programming in systems languages is not a known subject
+    I will let them introduce their selves but it's worth checking out their corners on the net.
+    *Gary* thanx for let me know about Meson and *yaspr* thanx for messing around with assembly while I'm working.
+There will be more but give me some time™.
 * contact info
 | irc.libera.chat | email                                      |
 |-----------------+--------------------------------------------|

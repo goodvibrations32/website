@@ -2,6 +2,8 @@ html, body{
     background: #062329;  
     color: #D1B897;
     scrollbar-color: #8cde94 #062329;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 h2, h3, h4, h5{
@@ -63,18 +65,27 @@ pre span.org-comment-delimiter           {color:#42A637;}
     font-weight: bold;
 }
 
+/*navigation*/
+
 .navbar ul{
     list-style-type: none;
     padding: 0px;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 .navbar a{
     color: #8cde94;
     text-decoration: none;
-    display: block;
-    padding-right: 22px;
     text-align: center;
+    font-size: x-large;
+}
+.navbar a:hover{
+    text-decoration: underline;
 }
 .navbar li{
     float: left;
+}
+
+hr{
+    border-color: #8cde94;
 }

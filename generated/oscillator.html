@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>awfulbytes</title>
+<title>oscillator</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -205,27 +205,63 @@
 </nav>
 <hr />
 <p>
-<h1 class="title">awfulbytes</h1><br />
+<h1 class="title">oscillator</h1><br />
 </p>
-<div id="outline-container-org1297a0c" class="outline-2">
-<h2 id="org1297a0c">untunable instruments for sonic explorations</h2>
-<div class="outline-text-2" id="text-org1297a0c">
+<div id="outline-container-org96059b6" class="outline-2">
+<h2 id="org96059b6">the untunable part</h2>
+<div class="outline-text-2" id="text-org96059b6">
 <p>
-Even the spell checker needs a dash there to understand what I&rsquo;m making but let me explain&hellip;<br />
-What if you had a monophonic source that is <span class="underline">untunable to musical standards</span> with a side effect of <b>sounding different</b>.<br />
+Something that stands between a DDS and a VCO. You can&rsquo;t call it tunable by musical standards but there is adequate frequency bandwidth to produce audible waveforms. You have the power of filling the flash with LUTs, while amplification and negative voltages happen in the analog domain. The idea and inspiration along with some code snippets and the exposure to embedded programming habits came from Mutable Instruments and the publicly available material of his. Thanx for all pichenettes.<br />
 </p>
 </div>
-</div>
-<div id="outline-container-orge6a32c1" class="outline-2">
-<h2 id="orge6a32c1">why untunable though?</h2>
-<div class="outline-text-2" id="text-orge6a32c1">
+<div id="outline-container-org8c383cb" class="outline-3">
+<h3 id="org8c383cb">but why?</h3>
+<div class="outline-text-3" id="text-org8c383cb">
 <p>
-The basic reason could be traced back to skill issues but I will defend my self a bit. There are no guides (<i>except some online resources)</i> or a clear distinct way to manufacture <span class="underline">complied</span> electronic instruments due to trademarked and copyrighted information for circuits but also the amount of money to comply with regulations (CE, FCC certs) have made most of the companies not to disclose part of the machines. So the idea is using the available online information acquired from decades of studying and manufacturing tunable <span class="underline">non musical</span> oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.<br />
+Digitization of music and &ldquo;perfect tuning&rdquo; has removed the possibility to recognize the production year of a record after the <a href="https://en.wikipedia.org/wiki/Loudness_war">loudness war</a>. Mastering people do what they can but giving them midi sequences does not provide them with much. Producing those <i>lightly detuned</i> frequencies in conjunction with tuned sources of sound (<i>obviously</i>) is one way to get back to actual experiments in electronic music.<br />
 </p>
 
 <p>
-This is the goal of <a href="./about.html">this project</a>. The why&rsquo;s and how&rsquo;s <a href="./oscillator.html">here</a>.<br />
+The same applies to components of an instrument. Using them in unconventional ways exposes interesting behaviors.<br />
+I&rsquo;m not proposing unstable wobbly controls and overdriving circuits just to hide bad quality parts, but sound generators not constrained at a tempering scale or forced to conform with a tuning system. There are plenty thoughtfull designs addressing tuning either with V/OCT inputs on analog chips and midi-capable oscillators so the spectrum is full. Slowly the chips are getting so much faster and the new thing is menu driven embedded systems with SOC&rsquo;s on a Eurorack Module. <a href="https://busycircuits.com/pages/alm042">Cizzle</a> from ALM has chords but also a nice phase distortion and <a href="https://ornament-and-cri.me/">ornament &amp; Crime</a> is basically a Control Voltage arbitrary generator.<br />
 </p>
+
+<p>
+Recently watching an old interview from Frank Zappa a comment for guitar solo&rsquo;s got me thinking. He pointed how much music had been commercialized (at 1984) and due to that guitar solo&rsquo;s where all prerecorded. He didn&rsquo;t prerecord any solo. Instead he knew &ldquo;roughly how long he&rsquo;s got&rdquo; and he has to decorate a piece of time (the <a href="https://www.youtube.com/watch?v=Eln3J6BxWN0">full interview</a> is really worth it). I need those solos in electronic music so this instrument will try to bring those back.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9f8485f" class="outline-2">
+<h2 id="org9f8485f">code and pcb&rsquo;s</h2>
+<div class="outline-text-2" id="text-org9f8485f">
+<p>
+A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments&rsquo; designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as <a href="https://miniaud.io/">miniaudio</a>, <a href="https://www.dafx.de/DAFX_Book_Page/">DAFX</a> but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader. The code <a href="https://github.com/awfulbytes/experiments">lives here for now</a> but plans for better hosting are coming soon.<br />
+</p>
+</div>
+<div id="outline-container-org62d5a15" class="outline-3">
+<h3 id="org62d5a15">code</h3>
+<div class="outline-text-3" id="text-org62d5a15">
+<p>
+The development is happening on the open. This means that I rebase master and break stuff during that phase. The main structure and idea of what the machine will be capable of is there but polishing and final touches aren&rsquo;t.<br />
+</p>
+
+<p>
+Currently I&rsquo;m testing the circuit on a breadboard with cables all around. <b>Documentation is not existing for now</b> but variable names are long and descriptive and there is <b>no hidden pointers in typedefs</b>. What you see on a declaration of a function is the actual argument passed. Structures are storing all the information used by a specific part in the codebase. NCO stuff are handled in <span class="underline">nco.c/h</span> and so on. All data are globally initialized with their startup/default values in a manual way in <span class="underline">interrupter.h</span> and <span class="underline">interrupter.c</span> hosts the entry point <b>main()</b>. All modification for changing modes and frequency (the &ldquo;misleadingly&rdquo; named <b>tune(&hellip;)</b> function) and higher level procedures are in <span class="underline">overseer.c/h</span>. I can continue but you get the idea of how the project is organized from viewing the folders there are no 3k LOC generated files so you could read!<br />
+</p>
+
+<p>
+As a build system <a href="https://mesonbuild.com">Meson</a> for simplicity, a Makefile could be also adequate (we just compile files and link them together) but Meson handles cross-compilation nicely so we ended up here.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org85b2fbb" class="outline-3">
+<h3 id="org85b2fbb">schematics and pcb design</h3>
+<div class="outline-text-3" id="text-org85b2fbb">
+<p>
+We will make the schematics available for everyone but pcb design and signal integrity are difficult to understand and sustaining a business around free material is hard by design. So anyone could build a PCB but supply chains and sourcing has become a draining process in the beginning. We will make our best to select parts that are not at the sunfall of their life but we can do only as much.<br />
+</p>
+</div>
 </div>
 </div>
 </div>

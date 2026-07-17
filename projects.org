@@ -1,0 +1,15 @@
+#+title: projects
+#+OPTIONS: \n:t title:nil
+#+include: style_and_nav.org
+* [[file:./oscillator.org][oscillator]]
+The current project in development. Code will change but the main idea is there.
+* [[https://github.com/awfulbytes/the_audio_programming_session][writing C for music]]
+A fast pass for some chapters from the book [[https://mitpress.mit.edu/9780262014465/the-audio-programming-book/][The audio programming book]] for writing the first audio lines in C.
+------
+* [[https://github.com/hmu-mech-npap/diss.tn.doc/][my bachelor thesis in org mode]]
+Reproducable documents are difficult to make and more over to keep in sync with changes on the dataset. Running code when a plot is needed differs a lot from running the script, producing the image, open the file manager, find the plot (assuming naming done correctly in the script) and importing the image to a rich text manipulation program i.e. Libre Office Writer or MS Word.
+* [[https://gitlab.com/goodvibrations32/tiles][FEA on acrylic tiles]]
+A basic Finite Element Analysis in FreeCad for simulating static forces elevated on feet.
+* [[https://gitlab.com/goodvibrations32/puzzle][a python interactive puzzle game]]
+The game is not finished but a proof of concept for a /"treasure hunt"-like/ game where qr-codes printed on paper and a camera on a raspberry pi 4 is reading and placing the corresponding image piece. The goal is... you guessed it... to find all hidden qr's in the room and complete the image.
+/P.S. I would like to find time to revive that one but it is working when archived./
