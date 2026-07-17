@@ -89,3 +89,8 @@ pre span.org-comment-delimiter           {color:#42A637;}
 hr{
     border-color: #8cde94;
 }
+
+.other_stuff{
+    color: #D1B897;
+    text-align: center;
+}
