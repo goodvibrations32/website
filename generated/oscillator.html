@@ -207,16 +207,16 @@
 <p>
 <h1 class="title">oscillator</h1><br />
 </p>
-<div id="outline-container-org96059b6" class="outline-2">
-<h2 id="org96059b6">the untunable part</h2>
-<div class="outline-text-2" id="text-org96059b6">
+<div id="outline-container-untunable_part" class="outline-2">
+<h2 id="untunable_part">the untunable part</h2>
+<div class="outline-text-2" id="text-untunable_part">
 <p>
 Something that stands between a DDS and a VCO. You can&rsquo;t call it tunable by musical standards but there is adequate frequency bandwidth to produce audible waveforms. You have the power of filling the flash with LUTs, while amplification and negative voltages happen in the analog domain. The idea and inspiration along with some code snippets and the exposure to embedded programming habits came from Mutable Instruments and the publicly available material of his. Thanx for all pichenettes.<br />
 </p>
 </div>
-<div id="outline-container-org8c383cb" class="outline-3">
-<h3 id="org8c383cb">but why?</h3>
-<div class="outline-text-3" id="text-org8c383cb">
+<div id="outline-container-org0bda010" class="outline-3">
+<h3 id="org0bda010">but why?</h3>
+<div class="outline-text-3" id="text-org0bda010">
 <p>
 Digitization of music and &ldquo;perfect tuning&rdquo; has removed the possibility to recognize the production year of a record after the <a href="https://en.wikipedia.org/wiki/Loudness_war">loudness war</a>. Mastering people do what they can but giving them midi sequences does not provide them with much. Producing those <i>lightly detuned</i> frequencies in conjunction with tuned sources of sound (<i>obviously</i>) is one way to get back to actual experiments in electronic music.<br />
 </p>
@@ -232,16 +232,16 @@ Recently watching an old interview from Frank Zappa a comment for guitar solo&rs
 </div>
 </div>
 </div>
-<div id="outline-container-org9f8485f" class="outline-2">
-<h2 id="org9f8485f">code and pcb&rsquo;s</h2>
-<div class="outline-text-2" id="text-org9f8485f">
+<div id="outline-container-code_and_pcb" class="outline-2">
+<h2 id="code_and_pcb">code and pcb&rsquo;s</h2>
+<div class="outline-text-2" id="text-code_and_pcb">
 <p>
 A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments&rsquo; designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as <a href="https://miniaud.io/">miniaudio</a>, <a href="https://www.dafx.de/DAFX_Book_Page/">DAFX</a> but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader. The code <a href="https://github.com/awfulbytes/experiments">lives here for now</a> but plans for better hosting are coming soon.<br />
 </p>
 </div>
-<div id="outline-container-org62d5a15" class="outline-3">
-<h3 id="org62d5a15">code</h3>
-<div class="outline-text-3" id="text-org62d5a15">
+<div id="outline-container-orgcf9ca2b" class="outline-3">
+<h3 id="orgcf9ca2b">code</h3>
+<div class="outline-text-3" id="text-orgcf9ca2b">
 <p>
 The development is happening on the open. This means that I rebase master and break stuff during that phase. The main structure and idea of what the machine will be capable of is there but polishing and final touches aren&rsquo;t.<br />
 </p>
@@ -255,9 +255,9 @@ As a build system <a href="https://mesonbuild.com">Meson</a> for simplicity, a M
 </p>
 </div>
 </div>
-<div id="outline-container-org85b2fbb" class="outline-3">
-<h3 id="org85b2fbb">schematics and pcb design</h3>
-<div class="outline-text-3" id="text-org85b2fbb">
+<div id="outline-container-org0f96463" class="outline-3">
+<h3 id="org0f96463">schematics and pcb design</h3>
+<div class="outline-text-3" id="text-org0f96463">
 <p>
 We will make the schematics available for everyone but pcb design and signal integrity are difficult to understand and sustaining a business around free material is hard by design. So anyone could build a PCB but supply chains and sourcing has become a draining process in the beginning. We will make our best to select parts that are not at the sunfall of their life but we can do only as much.<br />
 </p>

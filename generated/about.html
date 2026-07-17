@@ -216,9 +216,9 @@ My name is Nick, a Mechanical Engineer whose love for programming started late. 
 <p>
 Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu&rsquo;s which are getting overlooked. <a href="https://bogdanthegeek.github.io/blog/projects/vapeserver/">A cortex-m0+ can host a website</a> so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx&rsquo;s so these where found to suite the needs of the project among <a href="https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/">other reasons</a> without skyrocketing the price for the mcu&rsquo;s.<br />
 </p>
-<div id="outline-container-org17ffa2b" class="outline-2">
-<h2 id="org17ffa2b">and this is our coding style</h2>
-<div class="outline-text-2" id="text-org17ffa2b">
+<div id="outline-container-coding_style" class="outline-2">
+<h2 id="coding_style">this is our coding style</h2>
+<div class="outline-text-2" id="text-coding_style">
 <div class="org-src-container">
 <pre class="src src-C"><code><span style="color: #ffffff;">static</span> <span style="color: #ffffff;">inline</span> <span style="color: #8cde94;">bool</span> <span style="color: #ffffff;">read_gpio</span>(<span style="color: #ffffff;">struct</span> <span style="color: #8cde94;">gpio</span> *<span style="color: #c1d1e3;">g</span>){
     <span style="color: #ffffff;">return</span> (pin-&gt;port_id-&gt;IDR &amp; (1U &lt;&lt; pin-&gt;id) ? 1U : 0);
@@ -232,16 +232,16 @@ Then it was about time to transfer all this knowledge to more constrained enviro
 </div>
 </div>
 </div>
-<div id="outline-container-org785eeef" class="outline-2">
-<h2 id="org785eeef">online starting points</h2>
-<div class="outline-text-2" id="text-org785eeef">
+<div id="outline-container-starting_points" class="outline-2">
+<h2 id="starting_points">online starting points</h2>
+<div class="outline-text-2" id="text-starting_points">
 <p>
-There is information and I will make my best to have some of them here but it is sparse and most of it collectively acquired, on places like <a href="https://www.modwiggler.com/">modwiggler</a> and <a href="https://musicfromouterspace.com/">MFOS</a>, currently maintained by <a href="https://synthcube.com/">synthCube</a>, but also generic technical questions will be found at <a href="https://www.eevblog.com/forum/">EEVblog</a>. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN&rsquo;s and PNP&rsquo;s in arrangements). If all these words are vaguely familiar you can start from the first link <a href="#org3c973d5">here</a>.<br />
+There is information and I will make my best to have some of them here but it is sparse and most of it collectively acquired, on places like <a href="https://www.modwiggler.com/">modwiggler</a> and <a href="https://musicfromouterspace.com/">MFOS</a>, currently maintained by <a href="https://synthcube.com/">synthCube</a>, but also generic technical questions will be found at <a href="https://www.eevblog.com/forum/">EEVblog</a>. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN&rsquo;s and PNP&rsquo;s in arrangements). If all these words are vaguely familiar you can start from the first link <a href="#resources">here</a>.<br />
 </p>
 </div>
-<div id="outline-container-org3c973d5" class="outline-3">
-<h3 id="org3c973d5">resources</h3>
-<div class="outline-text-3" id="text-org3c973d5">
+<div id="outline-container-resources" class="outline-3">
+<h3 id="resources">resources</h3>
+<div class="outline-text-3" id="text-resources">
 <p>
 The list can be changed but the order will be with importance. I found that would be better if I didn&rsquo;t list books and studies I read but the resources that led me to those books and leave up to you to read and criticize them making your own path.<br />
 </p>
@@ -267,9 +267,9 @@ There will be more but give me some time™.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org7dd0679" class="outline-2">
-<h2 id="org7dd0679">contact info</h2>
-<div class="outline-text-2" id="text-org7dd0679">
+<div id="outline-container-contact" class="outline-2">
+<h2 id="contact">contact info</h2>
+<div class="outline-text-2" id="text-contact">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
