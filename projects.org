@@ -3,6 +3,9 @@
 #+include: style_and_nav.org
 @@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
 * [[file:./oscillator.org][oscillator]]
+:properties:
+:CUSTOM_ID: oscillator
+:end:
 The current project in development. Code will change but the main idea is there.
 * [[https://github.com/awfulbytes/the_audio_programming_session][writing C for music]]
 A fast pass for some chapters from the book [[https://mitpress.mit.edu/9780262014465/the-audio-programming-book/][The audio programming book]] for writing the first audio lines in C.

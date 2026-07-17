@@ -8,7 +8,10 @@ My name is Nick, a Mechanical Engineer whose love for programming started late. 
 
 Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu's which are getting overlooked. [[https://bogdanthegeek.github.io/blog/projects/vapeserver/][A cortex-m0+ can host a website]] so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx's so these where found to suite the needs of the project among [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/][other reasons]] without skyrocketing the price for the mcu's.
 
-* and this is our coding style
+* this is our coding style
+:properties:
+:custom_id: coding_style
+:end:
 #+begin_src C
 static inline bool read_gpio(struct gpio *g){
     return (pin->port_id->IDR & (1U << pin->id) ? 1U : 0);
@@ -20,8 +23,14 @@ int main(void){
 }
 #+end_src
 * online starting points
+:properties:
+:custom_id: starting_points
+:end:
 There is information and I will make my best to have some of them here but it is sparse and most of it collectively acquired, on places like [[https://www.modwiggler.com/][modwiggler]] and [[https://musicfromouterspace.com/][MFOS]], currently maintained by [[https://synthcube.com/][synthCube]], but also generic technical questions will be found at [[https://www.eevblog.com/forum/][EEVblog]]. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN's and PNP's in arrangements). If all these words are vaguely familiar you can start from the first link [[resources][here]].
 ** resources
+:properties:
+:custom_id: resources
+:end:
 The list can be changed but the order will be with importance. I found that would be better if I didn't list books and studies I read but the resources that led me to those books and leave up to you to read and criticize them making your own path.
 - Eurorack Systems
   - [[https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/education/][Mutable Instruments Education chapter]]
@@ -35,6 +44,9 @@ The list can be changed but the order will be with importance. I found that woul
     *Gary* thanx for let me know about Meson and *yaspr* thanx for messing around with assembly while I'm working.
 There will be more but give me some time™.
 * contact info
+:properties:
+:custom_id: contact
+:end:
 | irc.libera.chat | email                                      |
 |-----------------+--------------------------------------------|
 | #awfulbytes     | goodvibrations32 <at> awfulbytes <dot> org |
