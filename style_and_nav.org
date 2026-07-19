@@ -2,7 +2,7 @@
 #+HTML_HEAD: <link rel="icon" href="/assets/favicon.ico">
 #+HTML: <nav class="navbar">
 #+HTML:   <ul>
-#+HTML:     <li><a href="index.html">home</a></li>
+#+HTML:     <li><a href="https://awfulbytes.org">home</a></li>
 #+HTML:     <li><a href="projects.html">projects</a></li>
 #+HTML:     <li><a href="about.html">about</a></li>
 #+HTML:   </ul>
