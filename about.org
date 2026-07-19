@@ -43,10 +43,4 @@ The list can be changed but the order will be with importance. I found that woul
     I will let them introduce their selves but it's worth checking out their corners on the net.
     *Gary* thanx for let me know about Meson and *yaspr* thanx for messing around with assembly while I'm working.
 There will be more but give me some time™.
-* contact info
-:properties:
-:custom_id: contact
-:end:
-| irc.libera.chat | email                                      |
-|-----------------+--------------------------------------------|
-| #awfulbytes     | goodvibrations32 <at> awfulbytes <dot> org |
+* [[./contact.org][contact info]]

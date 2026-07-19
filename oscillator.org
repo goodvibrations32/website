@@ -38,4 +38,4 @@ As a build system [[https://mesonbuild.com][Meson]] for simplicity, a Makefile c
 ** schematics and pcb design
 We will make the schematics available for everyone but pcb design and signal integrity are difficult to understand and sustaining a business around free material is hard by design. So anyone could build a PCB but supply chains and sourcing has become a draining process in the beginning. We will make our best to select parts that are not at the sunfall of their life but we can do only as much.
 
-Until now you could inspect the design at Autodesk's online 3D viewer [[https://autode.sk/4oYT06u][here]]. There will be more footage and video showcasing the capabilities of the device but something to see is better than mere words on a page at a [[https://openbsd.amsterdam/][hosted website]].
+For now you can [[https://autode.sk/4oYT06u][inspect the design]] at *Autodesk's online free 3D* viewer and /pan around/. There will be more footage and video showcasing the capabilities of the device but something to see is better than mere words on a page at a [[https://openbsd.amsterdam/][hosted website]].

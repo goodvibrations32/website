@@ -1,0 +1,11 @@
+#+title: contact
+#+OPTIONS: \n:t title:nil
+#+INCLUDE: style_and_nav.org
+# :properties:
+# :custom-id: contact
+# :end:
+@@html:<h1 class="title">@@Email us at:@@html:</h1>@@
+@@html:<h2 class="minor_nudge">@@info@awfulbytes.org@@html:</h2>@@
+@@html:<h1 class="title">@@For more information see the about section.@@html:</h1>@@
+
+@@html:<h1 class="title" hidden>@@If you are a bot just give me a break...@@html:</h1>@@
