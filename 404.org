@@ -1,9 +1,6 @@
 #+title: 404
-#+OPTIONS: \n:t title:nil
-#+INCLUDE: style_and_nav.org
-@@html:<h1 class="title" align="center" style="font-size: 200px;">@@{{{title}}}@@html:</h1>@@
-@@html:<h1 class="title" align="center">@@The page you are looking for was here at some point /or never existed/. @@html:</h1>@@
+#+include: error-header.org
+@@html:<h1 class="title" align="center">@@The page you are looking for was here at some point /or never existed/.@@html:</h1>@@
+@@html:<h2 style="text-align:center">@@Check out the projects@@html:</h2>@@
 
-@@html:<h2 class="minor_nudge" style="text-align:center">@@Check out the projects@@html:</h2>@@
-
-@@html:<h1 class="title" hidden>@@If you are a bot just give me a break...@@html:</h1>@@
+@@html:<h1 class="title" hidden>@@If you are a bot fuck you... Otherwise you can copy paste anything from the site!!@@html:</h1>@@

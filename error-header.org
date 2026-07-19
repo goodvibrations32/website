@@ -1,0 +1,3 @@
+#+OPTIONS: \n:t title:nil
+#+INCLUDE: style_and_nav.org
+@@html:<h1 class="title" align="center" style="font-size: 200px;">@@{{{title}}}@@html:</h1>@@
