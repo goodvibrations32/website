@@ -94,3 +94,8 @@ hr{
     color: #D1B897;
     text-align: center;
 }
+
+[data-darkreader-scheme="dark"] html, body, a {
+    background: #062329;  
+    color: #D1B897;
+}
