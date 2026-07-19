@@ -1,0 +1,5 @@
+#+title: 403
+#+include: error-header.org
+@@html:<h1 class="title" align="center">@@Well this place needs more permissions for access than you have!@@html:</h1>@@
+
+@@html:<h1 class="title" hidden>@@If you are a bot fuck you... Otherwise you can copy paste anything from the site!!@@html:</h1>@@
