@@ -1,6 +1,6 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
-#+HTML_HEAD: <link rel="icon" href="/assets/favicon.ico">
-#+HTML: <nav class="navbar">
+#+OPTIONS: \n:t title:nil
+#+HTML: <nav class="landing_nav">
 #+HTML:   <ul>
 #+HTML:     <li><a href="https://awfulbytes.org">home</a></li>
 #+HTML:     <li><a href="projects.html">projects</a></li>

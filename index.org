@@ -1,6 +1,5 @@
 #+title: awfulbytes
-#+OPTIONS: \n:t title:nil
-#+INCLUDE: style_and_nav.org
+#+include: nav-landing.org
 @@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
 * untunable instruments for sonic explorations
 Even the spell checker needs a dash there to understand what I'm making but let me explain...

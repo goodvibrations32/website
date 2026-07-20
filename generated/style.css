@@ -32,11 +32,11 @@ a:visited{
 }
 
 /* code */
-pre, code{
+code{
     background: #062329;
-    overflow: scroll;
 }
 pre{
+    background: #062329;
     border: 2px solid #8cde94;
     scrollbar-color: #8cde94 #062329;
 }
@@ -72,23 +72,87 @@ pre span.org-comment-delimiter           {color:#42A637;}
 
 /*navigation*/
 
+.landing_nav{
+    position: fixed;
+    top: 0px;
+    left: 25px;
+    right: 25px;
+    background-color: #062329;
+}
+.landing_nav a{
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: xx-large;
+    color: #8cde94;
+    background-color: #062329;
+}
+
+.landing_nav ul{
+    list-style-type: none;
+    padding: 0px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-align: center;
+    text-overflow: ellipsis;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.landing_nav a:hover{
+    text-decoration: underline;
+    opacity: 0.5;
+}
+
+
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 25px;
+    right: 25px;
+    background-color: #062329;
+    opacity: 0;
+    transition: ease-out .1s;
+}
+@keyframes hide-navbar{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+.navbar a{
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: xx-large;
+    color: #8cde94;
+    background-color: #062329;
+}
+
 .navbar ul{
     list-style-type: none;
     padding: 0px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-align: center;
+    text-overflow: ellipsis;
+
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
-.navbar a{
-    color: #8cde94;
-    text-decoration: none;
-    text-align: center;
-    font-size: x-large;
-}
+
 .navbar a:hover{
     text-decoration: underline;
+    opacity: 0.5;
 }
-.navbar li{
-    float: left;
+.navbar:hover{
+    opacity: 1;
 }
 
 hr{
