@@ -1,7 +1,7 @@
 #+title: projects
-#+OPTIONS: \n:t title:nil
+#+OPTIONS: \n:t
 #+include: style_and_nav.org
-@@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
+# @@html:<h1 class="title" align="none">@@{{{title}}}@@html:</h1>@@
 * [[file:./oscillator.org][oscillator]]
 :properties:
 :CUSTOM_ID: oscillator
@@ -15,7 +15,7 @@ The current project in development.
 A fast pass for some chapters from the book [[https://mitpress.mit.edu/9780262014465/the-audio-programming-book/][The audio programming book]] for writing the first audio lines in C.
 ------
 ------
-@@html:<h2 class="other_stuff">other stuff</h2>@@
+@@html:<h1 class="title">other stuff</h1>@@
 * [[https://gitlab.com/goodvibrations32/tiles][FEA on acrylic tiles]]
 :properties:
 :CUSTOM_ID: fea_acrylic_tiles
