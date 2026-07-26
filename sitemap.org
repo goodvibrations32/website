@@ -1,7 +1,0 @@
-#+TITLE: Sitemap for project awfulbytes
-
-- [[file:about.org][about us]]
-- [[file:index.org][awfulbytes]]
-- [[file:contact.org][contact]]
-- [[file:oscillator.org][oscillator]]
-- [[file:projects.org][projects]]
