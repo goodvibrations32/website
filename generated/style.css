@@ -12,30 +12,36 @@ p{
     text-justify: none;
 
     font-size: 24px;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 h2, h3, h4, h5{
     color: #e3dcd3;
     font-size: 36px;
+    padding-left: 150px;
+    padding-right: 150px;
 }
-h2 { .a:hover{
-    color: #8CDE94;
-    font-size: 36px;
-     }
+h2 {
+    .a:hover {
+        color: #8CDE94;
+        font-size: 36px;
+       }
 }
 
 h1{
     color: #8CDE94;
-    font-size: 48px;
+    font-size: 68px;
 }
-p, ul{
+ul{
     color: #D1B897;
     font-size: 24px;
+    padding-left: 180px;
+    padding-right: 150px;
 }
 
 a:link{
     color: #00def0;
-    /* font-size: 32px; */
 }
 
 a:hover{
@@ -53,13 +59,19 @@ code{
 }
 pre{
     background: #062329;
-    border: 2px solid #8cde94;
+    /* border: 2px solid #8cde94; */
     scrollbar-color: #8cde94 #062329;
+    padding-left: 240px;
+    padding-right: 150px;
 }
 pre code{
-    background: #062329;
+    /* background: #062329; */
     scrollbar-color: #8cde94 #062329;
 }
+/* span{ */
+/*     padding-left: 240px; */
+/*     padding-right: 150px; */
+/* } */
 
 pre span.org-string                      {color:#42A637;}
 pre span.org-keyword                     {color:#ffffff;}

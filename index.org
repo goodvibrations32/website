@@ -1,6 +1,7 @@
 #+title: awfulbytes
+#+options: title:nil
 #+include: style_and_nav.org
-# @@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
+@@html:<h1 class="title" style="text-align: center;">@@{{{title}}}@@html:</h1>@@
 * untunable instruments for sonic explorations
 :properties:
 :custom_id: intro

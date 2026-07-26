@@ -1,21 +1,23 @@
 #+title: projects
-#+OPTIONS: \n:t
+#+options: title:nil
 #+include: style_and_nav.org
-# @@html:<h1 class="title" align="none">@@{{{title}}}@@html:</h1>@@
+@@html:<p class="separ" style="text-align:center;">~~~~~~!~~~~~~@@@@html:</p>@@
+@@html:<h2 class="title" style="text-align: center; font-size: 42px">music related</h2>@@
 * [[file:./oscillator.org][oscillator]]
 :properties:
 :CUSTOM_ID: oscillator
 :end:
-The current project in development.
+The current project in development.@@html:<br>@@
 [[file:oscillator.org::#code][Code]]​ will change but the main idea is there.
 * [[https://github.com/awfulbytes/the_audio_programming_session][writing C for music]]
 :properties:
 :CUSTOM_ID: writing_c_for_music
 :end:
 A fast pass for some chapters from the book [[https://mitpress.mit.edu/9780262014465/the-audio-programming-book/][The audio programming book]] for writing the first audio lines in C.
-------
-------
-@@html:<h1 class="title">other stuff</h1>@@
+
+@@html:<p class="separ" style="text-align:center;">~~~~~~!~~~~~~@@@@html:</p>@@
+
+@@html:<h2 class="title" style="text-align: center; font-size: 42px">other interesting stuff</h2>@@
 * [[https://gitlab.com/goodvibrations32/tiles][FEA on acrylic tiles]]
 :properties:
 :CUSTOM_ID: fea_acrylic_tiles
@@ -25,9 +27,11 @@ A basic Finite Element Analysis in FreeCad for simulating static forces elevated
 :properties:
 :CUSTOM_ID: python_qr_game
 :end:
-The game is not finished but a proof of concept for a /"treasure hunt"-like/ game where qr-codes printed on paper and a camera on a raspberry pi 4 is reading and placing the corresponding image piece. The goal is... you guessed it... to find all hidden qr's in the room and complete the image.
+The game is not finished but a proof of concept for a /"treasure hunt"-like/ game where qr-codes printed on paper and a camera on a raspberry pi 4 is reading and placing the corresponding image piece. The goal is... you guessed it... to find all hidden qr's in the room and complete the image.@@html:<br>@@
 /P.S. I would like to find time to revive that one but it is working when archived./
-* [[https://github.com/hmu-mech-npap/diss.tn.doc/][my bachelor thesis in org mode]]
+@@html:<p class="separ" style="text-align:center;">~~~~~~!~~~~~~@@@@html:</p>@@
+@@html:<h2 class="title" style="text-align: center; font-size: 42px">Bachelor thesis</h2>@@
+* [[https://github.com/hmu-mech-npap/diss.tn.doc/][thesis in org mode]]
 :properties:
 :CUSTOM_ID: bachelor_thesis
 :end:
