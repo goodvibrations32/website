@@ -6,6 +6,9 @@ html, body{
     color: #D1B897;
     scrollbar-color: #8cde94 #062329;
     font-size: 24px;
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
     @media(prefers-color-scheme: light){
         background: #069999;
         background-color: #069999;
@@ -22,6 +25,9 @@ p{
     font-size: 24px;
     background: #062329;  
     color: #D1B897;
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
     @media(prefers-color-scheme: light){
         text-align: start;
         text-justify: none;
@@ -36,6 +42,9 @@ h2, h3, h4, h5{
     margin: 10px;
     color: #e3dcd3;
     font-size: 36px;
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
     @media(prefers-color-scheme: light){
         color: #fef0d3;
     }
@@ -52,13 +61,20 @@ h2{
 h1{
     color: #8CDE94;
     font-size: 48px;
+    @media (max-width: 600px) {
+        font-size: 20px;
+    }
     @media(prefers-color-scheme: light){
         color: #fff0a3;
     }
 }
+
 ul{
     color: #D1B897;
     font-size: 24px;
+    @media(max-width: 600px){
+        font-size: 14px;
+    }
     @media(prefers-color-scheme: light){
         color: #062329;
     }
@@ -89,6 +105,9 @@ code{
     background: #062329;
     font-size: 18px;
     padding: 0px;
+    @media(max-width: 600px){
+        font-size: 14px;
+    }
     @media(prefers-color-scheme: light){
         background: #069999;
         background-color: #069999;
@@ -168,6 +187,9 @@ pre span.org-constant                    {color:#D0372D;}
     font-size: xxx-large;
     font-weight: bold;
     color: #8cde94;
+    @media (max-width: 600px) {
+        font-size: medium;
+    }
     @media(prefers-color-scheme: light){
         color: #fff0a3;
     }
@@ -198,24 +220,14 @@ hr{
     }
 }
 
+.mymail{
+    font-size: 73px;
+    @media(max-width: 600px){
+        font-size: 20px;
+    }
+}
+
 .other_stuff{
     color: #D1B897;
     text-align: center;
 }
-
-/* @media (prefers-color-scheme: light){ */
-/*     background: #675829; */
-/*     background-color: #675829; */
-/*     color: #062329; */
-/* } */
-/* [data-darkreader-scheme="dark"] html, body, a { */
-/*     background: #062329; */
-/*     color: #D1B897; */
-/* } */
-
-/* [data-darkreader-scheme="light"] head, root, html, body, a, p, li, navbar, navbar a, navbar ul, pre, code{ */
-/*     background: #675829; */
-/*     background-color: #675829; */
-/*     scrollbar-color: #675829 #062329; */
-/*     color: #062329; */
-/* } */

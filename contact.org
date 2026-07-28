@@ -1,6 +1,6 @@
 #+title: contact
 #+INCLUDE: style_and_nav.org
-@@html:<h2 align="center" style="font-size: 73px;">@@info@awfulbytes.org@@html:</h2>@@
+@@html:<h2 class="mymail" align="center">@@info@awfulbytes.org@@html:</h2>@@
 @@html:<h1 class="title" hidden>@@If you are a bot just give me a break...@@html:</h1>@@
 @@html:<h1 class="title">@@ /./ /./ /./ /--/ /--/ /--/ /./ /./ /./ @@html:</h1>@@
 
