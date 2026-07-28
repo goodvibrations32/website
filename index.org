@@ -1,14 +1,13 @@
 #+title: awfulbytes
 #+include: style_and_nav.org
-# @@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
+#+options: \n:t
 * untunable instruments for sonic explorations
 :properties:
 :custom_id: intro
 :end:
 Even the spell checker needs a dash there to understand what I'm making but let me explain...
 What if you had a monophonic source that is _untunable to musical standards_ with a side effect of *sounding different*.
-
-* why untunable though?
+** why untunable though?
 :properties:
 :custom_id: intro_second
 :end:
@@ -17,7 +16,6 @@ There are no guides (/except some online resources)/ or a clear distinct way to 
 So the idea is using the available online information acquired from decades of studying and manufacturing tunable _non musical_ oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments. The why's and how's [[file:./oscillator.org][here]].
 
 This is the goal of [[./about.org][this project]].
-
 * online starting points
 :properties:
 :custom_id: starting_points
@@ -34,8 +32,7 @@ The list can be changed but the order will be with importance. I found that woul
   - [[https://github.com/pichenettes/eurorack][Mutable Instruments source code]]
     The best book is someone's production code and there is no better codebase.
 - people
-  - [[https://www.reaperworld.com/][Gary Kramlich]], [[https://down2core.com/][yaspr]]
-    If programming in systems languages is not a known subject
     I will let them introduce their selves but it's worth checking out their corners on the net.
-    *Gary* thanx for let me know about Meson and *yaspr* thanx for messing around with assembly while I'm working.
+  - [[https://www.reaperworld.com/][Gary Kramlich]]
+  - [[https://down2core.com/][yaspr]]
 There will be more but give me some time™.

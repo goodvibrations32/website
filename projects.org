@@ -1,7 +1,6 @@
 #+title: projects
 #+OPTIONS: \n:t
 #+include: style_and_nav.org
-# @@html:<h1 class="title" align="none">@@{{{title}}}@@html:</h1>@@
 * [[file:./oscillator.org][oscillator]]
 :properties:
 :CUSTOM_ID: oscillator

@@ -1,164 +1,185 @@
+:root{
+    color-scheme: light dark;
+}
 html, body{ 
     background: #062329;  
     color: #D1B897;
     scrollbar-color: #8cde94 #062329;
-    margin-left: 15px;
-    margin-right: 15px;
     font-size: 24px;
+    @media(prefers-color-scheme: light){
+        background: #069999;
+        background-color: #069999;
+        scrollbar-color: #fff95f #069999;
+        color: #062329;
+    }
 }
 
 p{
     text-align: start;
     text-justify: none;
-
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 24px;
+    background: #062329;  
+    color: #D1B897;
+    @media(prefers-color-scheme: light){
+        text-align: start;
+        text-justify: none;
+
+        background: #069999;
+        background-color: #069999;
+        color: #062329;
+    }
 }
 
 h2, h3, h4, h5{
+    margin: 10px;
     color: #e3dcd3;
     font-size: 36px;
+    @media(prefers-color-scheme: light){
+        color: #fef0d3;
+    }
 }
-h2 { .a:hover{
-    color: #8CDE94;
-    font-size: 36px;
-     }
+h2{
+    .a:hover{
+        color: #8CDE94;
+        @media(prefers-color-scheme: light){
+            color: #fff0a3;
+        }
+    }
 }
 
 h1{
     color: #8CDE94;
     font-size: 48px;
+    @media(prefers-color-scheme: light){
+        color: #fff0a3;
+    }
 }
-p, ul{
+ul{
     color: #D1B897;
     font-size: 24px;
+    @media(prefers-color-scheme: light){
+        color: #062329;
+    }
 }
 
 a:link{
     color: #00def0;
-    /* font-size: 32px; */
+    @media(prefers-color-scheme: light){
+        color: #fff95f;
+    }
 }
 
 a:hover{
     color: #8CDE94;
+    @media(prefers-color-scheme: light){
+        color: #0FF906;
+    }
 }
 
 a:visited{
     color: #C1D1E3;
+    @media(prefers-color-scheme: light){
+        color: #d1d1e1;
+    }
 }
 
-/* code */
 code{
     background: #062329;
-    font-size: 24px;
+    font-size: 18px;
+    padding: 0px;
+    @media(prefers-color-scheme: light){
+        background: #069999;
+        background-color: #069999;
+    }
 }
 pre{
     background: #062329;
-    border: 2px solid #8cde94;
-    scrollbar-color: #8cde94 #062329;
-}
-pre code{
-    background: #062329;
-    scrollbar-color: #8cde94 #062329;
+    border: 1px solid #0cde94;
+    margin: 5px;
+    border-radius: 0px;
+    scrollbar-color: #0cde94 #062329;
+    line-height: 18px;
+    @media(prefers-color-scheme: light){
+        background: #069999;
+        border: 1px solid #fff95f;
+        background-color: #069999;
+        scrollbar-color: #fff95f #069999;
+    }
 }
 
-pre span.org-string                      {color:#42A637;}
-pre span.org-keyword                     {color:#ffffff;}
+pre span.org-string                      {color:#000080;}
+pre span.org-keyword                     {color:#fef0d3;}
 pre span.org-variable-name               {color:#C1D1E3;}
-pre span.org-function-name               {color:#ffffff;}
+pre span.org-function-name               {color:#fef0d3;}
 pre span.org-type                        {color:#8CDE94;}
 pre span.org-preprocessor                {color:#8CDE94;font-weight:bold;}
 pre span.org-constant                    {color:#D0372D;}
-pre span.org-comment-delimiter           {color:#42A637;}
 
 *::selection{
     background: #0000f0;
     color: #ffffff;
     font-weight: bold;
+    @media(prefers-color-scheme: light){
+        background: #000080;
+        color: #8893ff;
+        font-weight: bold;
+    }
 }
 *::-moz-selection{
     background: #0000f0;
     color: #ffffff;
     font-weight: bold;
+    @media(prefers-color-scheme: light){
+        background: #000080;
+        color: #8893ff;
+        font-weight: bold;
+    }
 }
 *::-webkit-selection{
     background: #0000f0;
     color: #ffffff;
     font-weight: bold;
+    @media(prefers-color-scheme: light){
+        background: #000080;
+        color: #8893ff;
+        font-weight: bold;
+    }
 }
-
-/*navigation*/
-
-/* .landing_nav{ */
-/*     position: fixed; */
-/*     top: 0px; */
-/*     left: 25px; */
-/*     right: 25px; */
-/*     background-color: #062329; */
-/* } */
-/* .landing_nav a{ */
-/*     padding-left: 7px; */
-/*     padding-right: 7px; */
-/*     text-align: center; */
-/*     text-decoration: none; */
-
-/*     font-size: xxx-large; */
-/*     font-weight: bold; */
-/*     color: #8cde94; */
-/*     background-color: #062329; */
-/* } */
-
-/* .landing_nav ul{ */
-/*     list-style-type: none; */
-/*     padding: 0px; */
-/*     overflow-x: scroll; */
-/*     scrollbar-width: none; */
-/*     scroll-snap-align: center; */
-/*     text-overflow: ellipsis; */
-
-/*     display: flex; */
-/*     flex-wrap: nowrap; */
-/*     justify-content: space-between; */
-/* } */
-
-/* .landing_nav a:hover{ */
-/*     text-decoration: underline; */
-/*     opacity: 0.5; */
-/* } */
-
 
 .navbar{
     position: sticky;
     top: 0px;
-    left: 25px;
-    right: 25px;
-    background-color: #062329;
+    background: #062329;
+    @media(prefers-color-scheme: light){
+        background: #069999;
+    }
     opacity: 1;
     transition: ease-out .1s;
 }
-/* @keyframes hide-navbar{ */
-/*     from{opacity: 1;} */
-/*     to{opacity: 0;} */
-/* } */
 
 .navbar a{
-    padding-left: 7px;
-    padding-right: 7px;
     text-align: center;
     text-decoration: none;
+    margin-left: -20px;
+    margin-right: 20px;
 
     font-size: xxx-large;
     font-weight: bold;
     color: #8cde94;
-    background-color: #062329;
+    @media(prefers-color-scheme: light){
+        color: #fff0a3;
+    }
 }
 
 .navbar ul{
     list-style-type: none;
-    padding: 0px;
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-snap-align: center;
     text-overflow: ellipsis;
+    margin: -5px;
 
     display: flex;
     flex-wrap: nowrap;
@@ -172,6 +193,9 @@ pre span.org-comment-delimiter           {color:#42A637;}
 
 hr{
     border-color: #8cde94;
+    @media(prefers-color-scheme: light){
+        border-color: #fff95f;
+    }
 }
 
 .other_stuff{
@@ -179,7 +203,19 @@ hr{
     text-align: center;
 }
 
-[data-darkreader-scheme="dark"] html, body, a {
-    background: #062329;  
-    color: #D1B897;
-}
+/* @media (prefers-color-scheme: light){ */
+/*     background: #675829; */
+/*     background-color: #675829; */
+/*     color: #062329; */
+/* } */
+/* [data-darkreader-scheme="dark"] html, body, a { */
+/*     background: #062329; */
+/*     color: #D1B897; */
+/* } */
+
+/* [data-darkreader-scheme="light"] head, root, html, body, a, p, li, navbar, navbar a, navbar ul, pre, code{ */
+/*     background: #675829; */
+/*     background-color: #675829; */
+/*     scrollbar-color: #675829 #062329; */
+/*     color: #062329; */
+/* } */
