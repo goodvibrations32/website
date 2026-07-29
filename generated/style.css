@@ -188,7 +188,7 @@ pre span.org-constant                    {color:#D0372D;}
     font-weight: bold;
     color: #8cde94;
     @media (max-width: 600px) {
-        font-size: medium;
+        font-size: 18px;
     }
     @media(prefers-color-scheme: light){
         color: #fff0a3;
