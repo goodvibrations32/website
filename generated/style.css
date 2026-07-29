@@ -2,11 +2,11 @@
     color-scheme: light dark;
 }
 html, body{ 
-    background: #062329;  
+    background: #063329;
     color: #D1B897;
-    scrollbar-color: #8cde94 #062329;
+    scrollbar-color: #8cde94 #063329;
     font-size: 24px;
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
         font-size: 14px;
     }
     @media(prefers-color-scheme: light){
@@ -23,9 +23,9 @@ p{
     margin-left: 20px;
     margin-right: 20px;
     font-size: 24px;
-    background: #062329;  
+    background: #063329;
     color: #D1B897;
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
         font-size: 14px;
     }
     @media(prefers-color-scheme: light){
@@ -42,7 +42,7 @@ h2, h3, h4, h5{
     margin: 10px;
     color: #e3dcd3;
     font-size: 36px;
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
         font-size: 18px;
     }
     @media(prefers-color-scheme: light){
@@ -59,9 +59,9 @@ h2{
 }
 
 h1{
-    color: #8CDE94;
+    color: #a0c484;
     font-size: 48px;
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
         font-size: 20px;
     }
     @media(prefers-color-scheme: light){
@@ -72,11 +72,11 @@ h1{
 ul{
     color: #D1B897;
     font-size: 24px;
-    @media(max-width: 600px){
+    @media(max-width: 680px){
         font-size: 14px;
     }
     @media(prefers-color-scheme: light){
-        color: #062329;
+        color: #063329;
     }
 }
 
@@ -88,7 +88,7 @@ a:link{
 }
 
 a:hover{
-    color: #8CDE94;
+    color: #0CDE94;
     @media(prefers-color-scheme: light){
         color: #0FF906;
     }
@@ -102,11 +102,11 @@ a:visited{
 }
 
 code{
-    background: #062329;
+    background: #063329;
     font-size: 18px;
     padding: 0px;
-    @media(max-width: 600px){
-        font-size: 14px;
+    @media(max-width: 680px){
+        font-size: 11px;
     }
     @media(prefers-color-scheme: light){
         background: #069999;
@@ -114,12 +114,15 @@ code{
     }
 }
 pre{
-    background: #062329;
+    background: #063329;
     border: 1px solid #0cde94;
     margin: 5px;
     border-radius: 0px;
-    scrollbar-color: #0cde94 #062329;
+    scrollbar-color: #0cde94 #063329;
     line-height: 18px;
+    @media(max-width: 680px){
+        line-height: 12px;
+    }
     @media(prefers-color-scheme: light){
         background: #069999;
         border: 1px solid #fff95f;
@@ -170,7 +173,7 @@ pre span.org-constant                    {color:#D0372D;}
 .navbar{
     position: sticky;
     top: 0px;
-    background: #062329;
+    background: #063329;
     @media(prefers-color-scheme: light){
         background: #069999;
     }
@@ -186,8 +189,8 @@ pre span.org-constant                    {color:#D0372D;}
 
     font-size: xxx-large;
     font-weight: bold;
-    color: #8cde94;
-    @media (max-width: 600px) {
+    color: #a0c484;
+    @media (max-width: 680px) {
         font-size: 18px;
     }
     @media(prefers-color-scheme: light){
@@ -214,7 +217,7 @@ pre span.org-constant                    {color:#D0372D;}
 }
 
 hr{
-    border-color: #8cde94;
+    border-color: #a0c484;
     @media(prefers-color-scheme: light){
         border-color: #fff95f;
     }
@@ -222,7 +225,7 @@ hr{
 
 .mymail{
     font-size: 73px;
-    @media(max-width: 600px){
+    @media(max-width: 680px){
         font-size: 20px;
     }
 }
