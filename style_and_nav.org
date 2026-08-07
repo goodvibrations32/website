@@ -3,7 +3,7 @@
 #+HTML: <nav class="navbar">
 #+HTML:   <ul>
 #+HTML:     <sep>||</sep>
-#+HTML:     <li><a href="https://awfulbytes.org">home</a></li>
+#+HTML:     <li><a href="index.html">home</a></li>
 #+HTML:     <sep>|</sep>
 #+HTML:     <li><a href="projects.html">projects</a></li>
 #+HTML:     <sep>|</sep>
