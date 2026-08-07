@@ -197,7 +197,6 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">about us</h1>
 <nav class="navbar">
 <ul>
 <sep>||</sep>
@@ -212,11 +211,6 @@
 </ul><hr />
 </nav>
 <p>
-&ldquo;Us&rdquo; is a bit overstating the situation. Currently it&rsquo;s only me but the plan is to create a place where development and manufacture of personal &ldquo;one item&rdquo; products for your electronic collection of musical instruments.<br />
-Form-factor it as you want. There is a Eurorack System format currently at a pre-production stage with the ambition to get it mass produced.<br />
-</p>
-
-<p>
 My name is Nick, a Mechanical Engineer whose love for programming started late. My bachelor thesis involved signal post-processing for EMI filtering from electric motors used in the experimental setup. I was lucky enough to have a diverse curriculum and among them were basic IoT device building on a simulator, a punching tool on a lathe <b>with knurling</b> now gifted to a friend and other interesting stuff. My thesis supervisor, <i>whom I have to kindly ask for naming him here</i>, created the turning point and let me explore the early stages of programming helping a lot to untangle the thread of implementing signal processing with the help of other libraries where python wasn&rsquo;t fast enough (hey scipy, it&rsquo;s been a while).<br />
 </p>
 
@@ -224,8 +218,13 @@ My name is Nick, a Mechanical Engineer whose love for programming started late. 
 Then it was about time to transfer all this knowledge to more constrained environments and high level abstractions got in the way due to lack of flash and ram on powerful mcu&rsquo;s which are getting overlooked. <a href="https://bogdanthegeek.github.io/blog/projects/vapeserver/">A cortex-m0+ can host a website</a> so this is not some block diagrams on a infinitely digital board but hardware capable of crunching numbers. STMicroelectronics was kind enough to stash a nice timer peripheral in stm32g071xx&rsquo;s so these where found to suite the needs of the project among <a href="https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/stm32_miscellania/">other reasons</a> without skyrocketing the price for the mcu&rsquo;s.<br />
 </p>
 
+<p>
+Currently it&rsquo;s only me but the plan is to create a place where development and manufacture of personal &ldquo;one item&rdquo; products for your electronic collection of musical instruments.<br />
+Form-factor it as you want. There is a Eurorack System format currently at a pre-production stage with the ambition to get it mass produced.<br />
+</p>
+
 <div class="org-src-container">
-<pre class="src src-C" id="orgd22eec7"><code><span style="color: #ffffff;">static</span> <span style="color: #ffffff;">inline</span> <span style="color: #8cde94;">bool</span> <span style="color: #ffffff;">read_gpio</span>(<span style="color: #ffffff;">struct</span> <span style="color: #8cde94;">gpio</span> *<span style="color: #c1d1e3;">g</span>){
+<pre class="src src-C" id="org853057b"><code><span style="color: #ffffff;">static</span> <span style="color: #ffffff;">inline</span> <span style="color: #8cde94;">bool</span> <span style="color: #ffffff;">read_gpio</span>(<span style="color: #ffffff;">struct</span> <span style="color: #8cde94;">gpio</span> *<span style="color: #c1d1e3;">g</span>){
     <span style="color: #ffffff;">return</span> (pin-&gt;port_id-&gt;IDR &amp; (1U &lt;&lt; pin-&gt;id) ? 1U : 0);
 }
 <span style="color: #8cde94;">int</span> <span style="color: #ffffff;">main</span>(<span style="color: #8cde94;">void</span>){

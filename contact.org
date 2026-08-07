@@ -1,4 +1,5 @@
 #+title: contact
+#+options: title:nil
 #+INCLUDE: style_and_nav.org
 @@html:<h2 class="mymail" align="center">@@info@awfulbytes.org@@html:</h2>@@
 @@html:<h1 class="title" hidden>@@If you are a bot just give me a break...@@html:</h1>@@

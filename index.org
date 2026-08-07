@@ -1,6 +1,7 @@
 #+title: awfulbytes
 #+include: style_and_nav.org
-#+options: \n:t
+#+options: \n:t title:nil
+@@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
 * untunable instruments for sonic explorations
 :properties:
 :custom_id: intro

@@ -239,23 +239,31 @@ An old interview from Frank Zappa commenting guitar solos amplified that thought
 </div>
 </div>
 <div id="outline-container-code_and_pcb" class="outline-2">
-<h2 id="code_and_pcb">code and pcb&rsquo;s</h2>
+<h2 id="code_and_pcb">project material</h2>
 <div class="outline-text-2" id="text-code_and_pcb">
 <p>
-A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments&rsquo; designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as <a href="https://miniaud.io/">miniaudio</a>, <a href="https://www.dafx.de/DAFX_Book_Page/">DAFX</a> but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader. The code <a href="https://github.com/awfulbytes/experiments">lives here for now</a> but plans for better hosting are coming soon.<br />
+A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments&rsquo; designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as <a href="https://miniaud.io/">miniaudio</a>, <a href="https://www.dafx.de/DAFX_Book_Page/">DAFX</a> but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader.<br />
 </p>
 </div>
+<div id="outline-container-org0a9bab3" class="outline-3">
+<h3 id="org0a9bab3">documentation</h3>
+<div class="outline-text-3" id="text-org0a9bab3">
+<p>
+There is a primitive man page for the basic and also the README has the same info twice&hellip; There will be a separation when the online resources are comparable and equivalent but for now building instructions are in both places for ease. Duplication of information is always bad but here we are.<br />
+</p>
+</div>
+</div>
 <div id="outline-container-code" class="outline-3">
-<h3 id="code"><a href="https://github.com/awfulbytes/experiments">code</a></h3>
+<h3 id="code">source code structure</h3>
 <div class="outline-text-3" id="text-code">
 <p>
-The development is happening on the open. This means that I rebase master and break stuff during that phase. The main structure and idea of what the machine will be capable of is there but polishing and final touches aren&rsquo;t.<br />
+The latest versions and history is on <a href="https://github.com/awfulbytes/experiments">github</a>. This means that master breaks backwards compatibility during that phase. If there is a major thing, this will be explained in the commit message.  The main idea of what the machine will be capable is there but polishing and final touches aren&rsquo;t.<br />
 </p>
 
 <p>
-Currently I&rsquo;m testing the circuit on a breadboard with cables all around. <b>Documentation is not existing for now</b> but variable names are long and descriptive and there is <b>no hidden pointers in typedefs</b>. What you see on a declaration of a function is the actual argument passed.<br />
-Structures are storing all the information used by a specific part in the codebase. NCO stuff handled in <span class="underline">nco.c/h</span>. All data are globally initialized with their startup/default values in a manual way in <span class="underline">include/interrupter.h</span> and <span class="underline">src/interrupter.c</span> hosts the entry point.<br />
-All modification of modes and frequencies (the <b>misleadingly named for musicians tune(&hellip;)</b> function) and higher level procedures are in <span class="underline">overseer.c/h</span>. I can continue but you get the idea of how the project is organized from viewing the folders.<br />
+Currently I&rsquo;m testing the circuit on a breadboard with cables all around. <b>Documentation is in progress</b> but variable names are long and descriptive and there are no <b>hidden</b> pointers in typedefs. What you see on a declaration of a function argument is what you see. Anyway there is no need for nasty pointer structures when everything is compile time known!<br />
+Structures are storing all the information used by a specific part in the codebase. NCO stuff handled in <i>nco.c/h</i>. All data are globally initialized with their startup/default values in a manual way in <i>include/interrupter.h</i> and <i>src/interrupter.c</i> hosts the entry point.<br />
+All modification of modes and frequencies (the <b>misleadingly named for musicians tune(&hellip;)</b> function) and higher level procedures are in <i>overseer.c/h</i>. I can continue but you get the idea of how the project is organized from viewing the folders.<br />
 </p>
 
 <p>
@@ -263,11 +271,7 @@ When all computation steps finish, the interrupts handle the DAC trigger and ADC
 </p>
 
 <p>
-There are <b>no</b> 3k LOC generated files so you could read them. Amazing I know&hellip;<br />
-</p>
-
-<p>
-As a build system <a href="https://mesonbuild.com">Meson</a> for simplicity, a Makefile could be also adequate (we just compile files and link them together) but Meson handles cross-compilation nicely so we ended up here.<br />
+As a build system - <a href="https://mesonbuild.com">Meson</a> for simplicity, a Makefile could be also adequate (we just compile files and link them together) but Meson handles cross-compilation nicely so we ended up here.<br />
 </p>
 </div>
 </div>

@@ -18,26 +18,26 @@ The same applies to components of an instrument. Using them in unconventional wa
 I'm not proposing unstable wobbly controls and overdriving circuits just to hide bad quality parts, but sound generators not constrained at a tempering scale or forced to conform with a tuning system. There are plenty thoughtfull designs addressing tuning either with V/OCT inputs on analog chips or midi-capable oscillators so the spectrum is full. Slowly the chips are getting so much faster and menu driven embedded systems with SOC's on a Eurorack Module are becoming more and more common. [[https://busycircuits.com/pages/alm042][Cizzle]] from ALM has chords but also a nice phase distortion and [[https://ornament-and-cri.me/][ornament & Crime]] is basically a Control Voltage arbitrary generator.
 
 An old interview from Frank Zappa commenting guitar solos amplified that thought. He pointed how much commercialized music was (at 1984) and due to that guitar solo's where all prerecorded and /spotless/ on live performances. He didn't prerecord any solo played on concerts. Instead he knew "roughly how long he's got" and had to decorate /a piece of time/ (the [[https://www.youtube.com/watch?v=Eln3J6BxWN0][full interview]] is really worth it). I need those solos in electronic music so this instrument will try to bring those back.
-* code and pcb's
+* project material
 :properties:
 :custom_id: code_and_pcb
 :end:
-A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments' designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as [[https://miniaud.io/][miniaudio]], [[https://www.dafx.de/DAFX_Book_Page/][DAFX]] but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader. The code [[https://github.com/awfulbytes/experiments][lives here for now]] but plans for better hosting are coming soon.
-** [[https://github.com/awfulbytes/experiments][code]]
+A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments' designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as [[https://miniaud.io/][miniaudio]], [[https://www.dafx.de/DAFX_Book_Page/][DAFX]] but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader.
+** documentation
+There is a primitive man page for the basic and also the README has the same info twice... There will be a separation when the online resources are comparable and equivalent but for now building instructions are in both places for ease. Duplication of information is always bad but here we are.
+** source code structure
 :properties:
 :custom_id: code
 :end:
-The development is happening on the open. This means that I rebase master and break stuff during that phase. The main structure and idea of what the machine will be capable of is there but polishing and final touches aren't.
+The latest versions and history is on [[https://github.com/awfulbytes/experiments][github]]. This means that master breaks backwards compatibility during that phase. If there is a major thing, this will be explained in the commit message.  The main idea of what the machine will be capable is there but polishing and final touches aren't.
 
-Currently I'm testing the circuit on a breadboard with cables all around. *Documentation is not existing for now* but variable names are long and descriptive and there is *no hidden pointers in typedefs*. What you see on a declaration of a function is the actual argument passed.
-Structures are storing all the information used by a specific part in the codebase. NCO stuff handled in _nco.c/h_. All data are globally initialized with their startup/default values in a manual way in _include/interrupter.h_ and _src/interrupter.c_ hosts the entry point.
-All modification of modes and frequencies (the *misleadingly named for musicians tune(...)* function) and higher level procedures are in _overseer.c/h_. I can continue but you get the idea of how the project is organized from viewing the folders.
+Currently I'm testing the circuit on a breadboard with cables all around. *Documentation is in progress* but variable names are long and descriptive and there are no *hidden* pointers in typedefs. What you see on a declaration of a function argument is what you see. Anyway there is no need for nasty pointer structures when everything is compile time known!
+Structures are storing all the information used by a specific part in the codebase. NCO stuff handled in /nco.c/h/. All data are globally initialized with their startup/default values in a manual way in /include/interrupter.h/ and /src/interrupter.c/ hosts the entry point.
+All modification of modes and frequencies (the *misleadingly named for musicians tune(...)* function) and higher level procedures are in /overseer.c/h/. I can continue but you get the idea of how the project is organized from viewing the folders.
 
 When all computation steps finish, the interrupts handle the DAC trigger and ADC sampling methods. The configuration for those as well as some basic gpio and flash stuff, to help me with the capitalization and weird volatile's everywhere of ST's API, are in the _drivers_ folder.
 
-There are *no* 3k LOC generated files so you could read them. Amazing I know...
-
-As a build system [[https://mesonbuild.com][Meson]] for simplicity, a Makefile could be also adequate (we just compile files and link them together) but Meson handles cross-compilation nicely so we ended up here.
+As a build system - [[https://mesonbuild.com][Meson]] for simplicity, a Makefile could be also adequate (we just compile files and link them together) but Meson handles cross-compilation nicely so we ended up here.
 ** schematics and pcb design
 :properties:
 :custom_id: sch_and_pcb_oscillator

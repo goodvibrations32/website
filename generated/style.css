@@ -2,17 +2,17 @@
     color-scheme: light dark;
 }
 html, body{ 
-    background: #063329;
-    color: #D1B897;
-    scrollbar-color: #8cde94 #063329;
+    background: #032339;
+    color: #fdf5e6;
+    scrollbar-color: #50c484 #032339;
     font-size: 24px;
-    @media (max-width: 680px) {
+    @media (max-width: 850px) {
         font-size: 14px;
     }
     @media(prefers-color-scheme: light){
-        background: #069999;
-        background-color: #069999;
-        scrollbar-color: #fff95f #069999;
+        background: #569999;
+        background-color: #569999;
+        scrollbar-color: #fff95f #569999;
         color: #062329;
     }
 }
@@ -20,29 +20,29 @@ html, body{
 p{
     text-align: start;
     text-justify: none;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
     font-size: 24px;
-    background: #063329;
-    color: #D1B897;
-    @media (max-width: 680px) {
+    background: #032339;
+    color: #fdf5e6;
+    @media (max-width: 850px) {
         font-size: 14px;
     }
     @media(prefers-color-scheme: light){
         text-align: start;
         text-justify: none;
 
-        background: #069999;
-        background-color: #069999;
+        background: #569999;
+        background-color: #569999;
         color: #062329;
     }
 }
 
 h2, h3, h4, h5{
     margin: 10px;
-    color: #e3dcd3;
+    color: #acdcfc;
     font-size: 36px;
-    @media (max-width: 680px) {
+    @media (max-width: 850px) {
         font-size: 18px;
     }
     @media(prefers-color-scheme: light){
@@ -59,24 +59,25 @@ h2{
 }
 
 h1{
-    color: #a0c484;
+    color: #50c484;
     font-size: 48px;
-    @media (max-width: 680px) {
+    @media (max-width: 850px) {
         font-size: 20px;
     }
     @media(prefers-color-scheme: light){
-        color: #fff0a3;
+        color: #fff950;
     }
 }
 
-ul{
-    color: #D1B897;
+ul {
+    color: #fdf5e6;
     font-size: 24px;
-    @media(max-width: 680px){
+    margin-right: 15px;
+    @media(max-width: 850px){
         font-size: 14px;
     }
     @media(prefers-color-scheme: light){
-        color: #063329;
+        color: #032339;
     }
 }
 
@@ -102,32 +103,32 @@ a:visited{
 }
 
 code{
-    background: #063329;
+    background: #000002;
     font-size: 18px;
     padding: 0px;
-    @media(max-width: 680px){
+    @media(max-width: 850px){
         font-size: 11px;
     }
     @media(prefers-color-scheme: light){
-        background: #069999;
-        background-color: #069999;
+        background: #009f99;
+        background-color: #009f99;
     }
 }
 pre{
-    background: #063329;
+    background: #000002;
     border: 1px solid #0cde94;
     margin: 5px;
     border-radius: 0px;
-    scrollbar-color: #0cde94 #063329;
+    scrollbar-color: #0cde94 #032339;
     line-height: 18px;
-    @media(max-width: 680px){
+    @media(max-width: 850px){
         line-height: 12px;
     }
     @media(prefers-color-scheme: light){
-        background: #069999;
+        background: #009f99;
         border: 1px solid #fff95f;
-        background-color: #069999;
-        scrollbar-color: #fff95f #069999;
+        background-color: #009f99;
+        scrollbar-color: #fff95f #009f99;
     }
 }
 
@@ -173,9 +174,9 @@ pre span.org-constant                    {color:#D0372D;}
 .navbar{
     position: sticky;
     top: 0px;
-    background: #063329;
+    background: #032339;
     @media(prefers-color-scheme: light){
-        background: #069999;
+        background: #569999;
     }
     opacity: 1;
     transition: ease-out .1s;
@@ -189,12 +190,12 @@ pre span.org-constant                    {color:#D0372D;}
 
     font-size: xxx-large;
     font-weight: bold;
-    color: #a0c484;
-    @media (max-width: 680px) {
-        font-size: 18px;
+    color: #50c484;
+    @media (max-width: 850px) {
+        font-size: 20px;
     }
     @media(prefers-color-scheme: light){
-        color: #fff0a3;
+        color: #fff950;
     }
 }
 
@@ -206,12 +207,12 @@ pre span.org-constant                    {color:#D0372D;}
 
     font-size: xxx-large;
     font-weight: bold;
-    color: #a0c484;
-    @media (max-width: 680px) {
-        font-size: 18px;
+    color: #50c484;
+    @media (max-width: 850px) {
+        font-size: 20px;
     }
     @media(prefers-color-scheme: light){
-        color: #fff0a3;
+        color: #fff950;
     }
 }
 
@@ -234,7 +235,7 @@ pre span.org-constant                    {color:#D0372D;}
 }
 
 hr{
-    border-color: #a0c484;
+    border-color: #50c484;
     @media(prefers-color-scheme: light){
         border-color: #fff95f;
     }
@@ -242,7 +243,7 @@ hr{
 
 .mymail{
     font-size: 73px;
-    @media(max-width: 680px){
+    @media(max-width: 850px){
         font-size: 20px;
     }
 }
