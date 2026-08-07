@@ -96,9 +96,9 @@ a:hover{
 }
 
 a:visited{
-    color: #C1D1E3;
+    color: #0CDE94;
     @media(prefers-color-scheme: light){
-        color: #d1d1e1;
+        color: #0FF906;
     }
 }
 
@@ -117,7 +117,10 @@ code{
 pre{
     background: #000002;
     border: 1px solid #0cde94;
-    margin: 5px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: -15px;
+    /* margin-bottom: -10px; */
     border-radius: 0px;
     scrollbar-color: #0cde94 #032339;
     line-height: 18px;
