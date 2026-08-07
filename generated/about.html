@@ -200,15 +200,15 @@
 <h1 class="title">about us</h1>
 <nav class="navbar">
 <ul>
-<li><a>||</a></li>
+<sep>||</sep>
 <li><a href="https://awfulbytes.org">home</a></li>
-<li><a>|</a></li>
+<sep>|</sep>
 <li><a href="projects.html">projects</a></li>
-<li><a>|</a></li>
+<sep>|</sep>
 <li><a href="about.html">about</a></li>
-<li><a>|</a></li>
+<sep>|</sep>
 <li><a href="contact.html">contact</a></li>
-<li><a>||</a></li>
+<sep>||</sep>
 </ul><hr />
 </nav>
 <p>
@@ -225,7 +225,7 @@ Then it was about time to transfer all this knowledge to more constrained enviro
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgbf9fe5d"><code><span style="color: #ffffff;">static</span> <span style="color: #ffffff;">inline</span> <span style="color: #8cde94;">bool</span> <span style="color: #ffffff;">read_gpio</span>(<span style="color: #ffffff;">struct</span> <span style="color: #8cde94;">gpio</span> *<span style="color: #c1d1e3;">g</span>){
+<pre class="src src-C" id="orgbaa19d3"><code><span style="color: #ffffff;">static</span> <span style="color: #ffffff;">inline</span> <span style="color: #8cde94;">bool</span> <span style="color: #ffffff;">read_gpio</span>(<span style="color: #ffffff;">struct</span> <span style="color: #8cde94;">gpio</span> *<span style="color: #c1d1e3;">g</span>){
     <span style="color: #ffffff;">return</span> (pin-&gt;port_id-&gt;IDR &amp; (1U &lt;&lt; pin-&gt;id) ? 1U : 0);
 }
 <span style="color: #8cde94;">int</span> <span style="color: #ffffff;">main</span>(<span style="color: #8cde94;">void</span>){

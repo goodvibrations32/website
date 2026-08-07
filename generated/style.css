@@ -198,6 +198,23 @@ pre span.org-constant                    {color:#D0372D;}
     }
 }
 
+.navbar sep{
+    text-align: center;
+    text-decoration: none;
+    margin-left: -20px;
+    margin-right: 20px;
+
+    font-size: xxx-large;
+    font-weight: bold;
+    color: #a0c484;
+    @media (max-width: 680px) {
+        font-size: 18px;
+    }
+    @media(prefers-color-scheme: light){
+        color: #fff0a3;
+    }
+}
+
 .navbar ul{
     list-style-type: none;
     overflow-x: scroll;
