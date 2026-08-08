@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>awfulbytes</title>
+<title>experiments</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -211,63 +211,59 @@
 </ul><hr />
 </nav>
 <p>
-<h1 class="title">awfulbytes</h1><br />
+<h1 class="title">experiments</h1><br />
 </p>
-<div id="outline-container-intro" class="outline-2">
-<h2 id="intro">untunable instruments for sonic explorations</h2>
-<div class="outline-text-2" id="text-intro">
+<div id="outline-container-untunable_part" class="outline-2">
+<h2 id="untunable_part">the untunable part</h2>
+<div class="outline-text-2" id="text-untunable_part">
 <p>
-Even the spell checker needs a dash there to understand what I&rsquo;m making but let me explain&hellip;<br />
-What if you had a monophonic source that is <span class="underline">untunable to musical standards</span> with a side effect of <b>sounding different</b>.<br />
+Something that stands between a DDS and a VCO. You can&rsquo;t call it tunable by musical standards but there is adequate frequency bandwidth to produce audible waveforms. You have the power of filling the flash with LUTs, while amplification and negative voltages happen in the analog domain. The idea and inspiration along with some code snippets and the exposure to embedded programming habits came from Mutable Instruments and the publicly available material of his. Thanx for all pichenettes.<br />
 </p>
 </div>
-<div id="outline-container-intro_second" class="outline-3">
-<h3 id="intro_second">why untunable though?</h3>
-<div class="outline-text-3" id="text-intro_second">
+<div id="outline-container-why_we_started_this" class="outline-3">
+<h3 id="why_we_started_this">but why?</h3>
+<div class="outline-text-3" id="text-why_we_started_this">
 <p>
-The basic reason could be traced back to skill issues but I will defend my self a bit.<br />
-There are no guides (<i>except some online resources)</i> or a clear distinct way to manufacture <span class="underline">complied</span> electronic instruments due to trademarked and copyrighted information for circuits but also the amount of money to comply with regulations (CE, FCC certs) have made most of the companies not to disclose part of the machines.<br />
-So the idea is using the available online information acquired from decades of studying and manufacturing tunable <span class="underline">non musical</span> oscillators for various applications like microwave ovens, portable radios, arbitrary function generators among others to create a new bread of electronic instruments.<br />
+Digitization of music and &ldquo;perfect tuning&rdquo; has removed the possibility to recognize the production year of a record after the <a href="https://en.wikipedia.org/wiki/Loudness_war">loudness war</a>. Mastering people do what they can but giving them midi sequences does not provide them with much. Producing those <i>lightly detuned</i> frequencies in conjunction with tuned sources of sound (<i>obviously</i>) is one way to get back to actual experiments in electronic music.<br />
 </p>
 
 <p>
-This is the goal of <a href="./about.html">this project</a>. The <a href="./experiments.html">why&rsquo;s and how&rsquo;s here</a>.<br />
+The same applies to components of an instrument. Using them in unconventional ways exposes interesting behaviors.<br />
+I&rsquo;m not proposing unstable wobbly controls and overdriving circuits just to hide bad quality parts, but sound generators not constrained at a tempering scale or forced to conform with a tuning system. There are plenty thoughtfull designs addressing tuning either with V/OCT inputs on analog chips or midi-capable oscillators so the spectrum is full. Slowly the chips are getting so much faster and menu driven embedded systems with SOC&rsquo;s on a Eurorack Module are becoming more and more common. <a href="https://busycircuits.com/pages/alm042">Cizzle</a> from ALM has chords but also a nice phase distortion and <a href="https://ornament-and-cri.me/">ornament &amp; Crime</a> is basically a Control Voltage arbitrary generator.<br />
 </p>
-</div>
-</div>
-</div>
-<div id="outline-container-starting_points" class="outline-2">
-<h2 id="starting_points">online starting points</h2>
-<div class="outline-text-2" id="text-starting_points">
+
 <p>
-There is information and I will make my best to have some of them here but it is sparse and most of it collectively acquired, on places like <a href="https://www.modwiggler.com/">modwiggler</a> and <a href="https://musicfromouterspace.com/">MFOS</a>, currently maintained by <a href="https://synthcube.com/">synthCube</a>, but also generic technical questions will be found at <a href="https://www.eevblog.com/forum/">EEVblog</a>. Modwiggler is still active but MFOS is a freezed capsule of analog electronics and the best place to start if you know what a resistor, a capacitor, a inductor, and a transistor are (Operational Amplifiers but are build from NPN&rsquo;s and PNP&rsquo;s in arrangements). If all these words are vaguely familiar you can start from the first link <a href="#resources">here</a>.<br />
+An old interview from Frank Zappa commenting guitar solos amplified that thought. He pointed how much commercialized music was (at 1984) and due to that guitar solo&rsquo;s where all prerecorded and <i>spotless</i> on live performances. He didn&rsquo;t prerecord any solo played on concerts. Instead he knew &ldquo;roughly how long he&rsquo;s got&rdquo; and had to decorate <i>a piece of time</i> (the <a href="https://www.youtube.com/watch?v=Eln3J6BxWN0">full interview</a> is really worth it). I need those solos in electronic music so this instrument will try to bring those back.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-resources" class="outline-2">
-<h2 id="resources">resources</h2>
-<div class="outline-text-2" id="text-resources">
+</div>
+<div id="outline-container-code_and_pcb" class="outline-2">
+<h2 id="code_and_pcb">project material</h2>
+<div class="outline-text-2" id="text-code_and_pcb">
 <p>
-The list can be changed but the order will be with importance. I found that would be better if I didn&rsquo;t list books and studies I read but the resources that led me to those books and leave up to you to read and criticize them making your own path.<br />
+A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments&rsquo; designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as <a href="https://miniaud.io/">miniaudio</a>, <a href="https://www.dafx.de/DAFX_Book_Page/">DAFX</a> but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader.<br />
 </p>
-<ul class="org-ul">
-<li>Eurorack Systems<br />
-<ul class="org-ul">
-<li><a href="https://pichenettes.github.io/mutable-instruments-documentation/tech_notes/education/">Mutable Instruments Education chapter</a><br />
-This is how I became aware of the possibility to manufacture something. There is a clean and difficulty order skill set explained.<br /></li>
-<li><a href="https://github.com/pichenettes/eurorack">Mutable Instruments source code</a><br />
-The best book is someone&rsquo;s production code and there is no better codebase.<br /></li>
-</ul></li>
-<li>people<br />
-I will let them introduce their selves but it&rsquo;s worth checking out their corners on the net.<br />
-<ul class="org-ul">
-<li><a href="https://www.reaperworld.com/">Gary Kramlich</a><br /></li>
-<li><a href="https://down2core.com/">yaspr</a><br /></li>
-</ul></li>
-</ul>
+</div>
+<div id="outline-container-orgf735b63" class="outline-3">
+<h3 id="orgf735b63">documentation</h3>
+<div class="outline-text-3" id="text-orgf735b63">
 <p>
-There will be more but give me some time™.<br />
+There is a primitive man page for the basic and also the README has the &ldquo;starting stuff&rdquo;&hellip; Online resources are available and equivalent and building instructions are in both places for ease. <a href="experiments_instructions.html">The web version</a> will be available in hard copy form (on pdf or something for storage but you could download html also!).<br />
 </p>
+</div>
+</div>
+<div id="outline-container-sch_and_pcb_experiments" class="outline-3">
+<h3 id="sch_and_pcb_experiments">schematics and pcb design</h3>
+<div class="outline-text-3" id="text-sch_and_pcb_experiments">
+<p>
+We will make the schematics available for everyone but pcb design and signal integrity are difficult to understand and sustaining a business around free material is hard by design. So anyone could build a PCB but supply chains and sourcing has become a draining process in the beginning. We will make our best to select parts that are not at the sunfall of their life but we can do only as much.<br />
+</p>
+
+<p>
+For now you can <a href="https://autode.sk/4oYT06u">inspect the design</a> at <b>Autodesk&rsquo;s online free 3D</b> viewer and <i>pan around</i>. There will be more footage and video showcasing the capabilities of the device but something to see is better than mere words on a page at a <a href="https://openbsd.amsterdam/">hosted website</a>.<br />
+</p>
+</div>
 </div>
 </div>
 </div>

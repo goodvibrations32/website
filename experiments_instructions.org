@@ -1,0 +1,53 @@
+#+title: instructions
+#+options: \n:t title:nil
+#+include: style_and_nav.org
+@@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
+* source code structure
+:properties:
+:custom_id: code
+:end:
+The latest versions and history is on [[https://github.com/awfulbytes/experiments][github]]. The master branch breaks backwards compatibility for now but for big stuff branches are used. If there is a major change, this will be explained in the commit message.  The main idea of what the machine will be capable is there but polishing and final touches aren't.
+
+Currently I'm testing the circuit on a breadboard with cables all around. *Documentation is in progress* but variable names are long and descriptive and there are no *hidden* pointers in typedefs. What you see on a declaration of a function argument is what you see. Anyway there is no need for nasty pointer structures when everything is compile time known!
+Structures are storing all the information used by a specific part in the codebase. NCO stuff handled in /nco.c/h/. All data are globally initialized with their startup/default values in a manual way in /include/interrupter.h/ and /src/interrupter.c/ hosts the entry point.
+All modification of modes and frequencies (the *misleadingly named for musicians tune(...)* function) and higher level procedures are in /overseer.c/h/. I can continue but you get the idea of how the project is organized from viewing the folders.
+
+When all computation steps finish, the interrupts handle the DAC trigger and ADC sampling methods. The configuration for those as well as some basic gpio and flash stuff, to help me with the capitalization and weird volatile's everywhere of ST's API, are in the _drivers_ folder.
+
+As a build system - [[https://mesonbuild.com][Meson]] for simplicity, a Makefile could be also adequate (we just compile files and link them together) but Meson handles cross-compilation nicely so we ended up here.
+* dependencies
+I know nobody likes them but /almost everybody/ needs them. [[https://mesonbuild.com/][Meson]] as a build system, is generating [[https://ninja-build.org/][Ninja]] build files.
+Then the /run_ target()/ command makes most of the invocation by the user through ninja. In the crossing.txt file, as the name implies, all cross compilation bits live.
+
+As for the compiler, *arm-none-eabi* gcc (GNU's Compiler Collection) is used and one should be able to install and manage versions through their Operating System.
+
+Flashing the device with *st-flash* supplied by ST and widely distributed. There should be no problem installing these and choosing a local directory exposed to the shell for execution. Archlinux packages it under the name [[https://archlinux.org/packages/extra/x86_64/stlink/][stlink]]. I advise you to read the man pages for st-util(1) and st-flash(1).
+* configuring the build directory
+First time
+#+begin_src sh
+$ meson setup build --cross-file crossing.txt
+#+end_src
+
+Refresh build files when a change happens in meson.build || crossing.txt
+#+begin_src sh
+$ meson setup build --wipe --cross-file crossing.txt
+#+end_src
+* building and flashing
+Generate .bin and .elf files with /-Osize | -Ofast/ optimizations.
+These can change in meson.build.
+#+begin_src sh
+$ ninja [testershit | release]
+#+end_src
+
+Clean the build folder and rebuild every file.
+It takes about 0.2 seconds there are approx. 50 files compiling for the hole project so it's ok to /nuke/.
+#+begin_src sh
+$ ninja nuke
+#+end_src
+
+Flashing a binary file to the MCU via ST-Link(TM) and 3-Wire SWD.
+#+begin_src sh
+$ ninja [sendit | fast]
+#+end_src
+
+@@html:<footer>@@ @@html:<h6 class="back_butt"><a href="./experiments.html">@@Back@@html:</a></h6>@@ @@html:</footer>@@

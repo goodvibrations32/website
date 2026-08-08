@@ -3,10 +3,10 @@
 #+include: style_and_nav.org
 * /experiments/
 :properties:
-:CUSTOM_ID: oscillator
+:CUSTOM_ID: experiments
 :end:
-The current [[file:oscillator.org][project]] in development.
-[[file:oscillator.org::#code][Code]] will change but the main idea is there.
+The current [[file:experiments.org][project]] in development.
+[[file:experiments_instructions.org::#code][Code]] will change but the main idea is there.
 * writing C for music
 :properties:
 :CUSTOM_ID: writing_c_for_music

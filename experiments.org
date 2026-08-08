@@ -1,4 +1,4 @@
-#+title: oscillator
+#+title: experiments
 #+OPTIONS: \n:t title:nil
 #+include: style_and_nav.org
 @@html:<h1 class="title">@@{{{title}}}@@html:</h1>@@
@@ -24,23 +24,10 @@ An old interview from Frank Zappa commenting guitar solos amplified that thought
 :end:
 A pre-production development board is on the way to clean up some ground bounce and a bit of switching noise we measure on the breadboard but most of the value lies on software. The hardware bits are all copied, but modified where needed, from Mutable Instruments' designs. The code is build from scratch by me with influence and inspiration from the STM LL libraries and code from other projects such as [[https://miniaud.io/][miniaudio]], [[https://www.dafx.de/DAFX_Book_Page/][DAFX]] but most embedded best moves came from pichenettes. The vendor libraries are used wherever possible to minimize confusion for a new reader.
 ** documentation
-There is a primitive man page for the basic and also the README has the same info twice... There will be a separation when the online resources are comparable and equivalent but for now building instructions are in both places for ease. Duplication of information is always bad but here we are.
-** source code structure
-:properties:
-:custom_id: code
-:end:
-The latest versions and history is on [[https://github.com/awfulbytes/experiments][github]]. This means that master breaks backwards compatibility during that phase. If there is a major thing, this will be explained in the commit message.  The main idea of what the machine will be capable is there but polishing and final touches aren't.
-
-Currently I'm testing the circuit on a breadboard with cables all around. *Documentation is in progress* but variable names are long and descriptive and there are no *hidden* pointers in typedefs. What you see on a declaration of a function argument is what you see. Anyway there is no need for nasty pointer structures when everything is compile time known!
-Structures are storing all the information used by a specific part in the codebase. NCO stuff handled in /nco.c/h/. All data are globally initialized with their startup/default values in a manual way in /include/interrupter.h/ and /src/interrupter.c/ hosts the entry point.
-All modification of modes and frequencies (the *misleadingly named for musicians tune(...)* function) and higher level procedures are in /overseer.c/h/. I can continue but you get the idea of how the project is organized from viewing the folders.
-
-When all computation steps finish, the interrupts handle the DAC trigger and ADC sampling methods. The configuration for those as well as some basic gpio and flash stuff, to help me with the capitalization and weird volatile's everywhere of ST's API, are in the _drivers_ folder.
-
-As a build system - [[https://mesonbuild.com][Meson]] for simplicity, a Makefile could be also adequate (we just compile files and link them together) but Meson handles cross-compilation nicely so we ended up here.
+There is a primitive man page for the basic and also the README has the "starting stuff"... Online resources are available and equivalent and building instructions are in both places for ease. [[file:experiments_instructions.org][The web version]] will be available in hard copy form (on pdf or something for storage but you could download html also!).
 ** schematics and pcb design
 :properties:
-:custom_id: sch_and_pcb_oscillator
+:custom_id: sch_and_pcb_experiments
 :end:
 We will make the schematics available for everyone but pcb design and signal integrity are difficult to understand and sustaining a business around free material is hard by design. So anyone could build a PCB but supply chains and sourcing has become a draining process in the beginning. We will make our best to select parts that are not at the sunfall of their life but we can do only as much.
 

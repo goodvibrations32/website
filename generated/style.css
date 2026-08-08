@@ -237,6 +237,19 @@ pre span.org-constant                    {color:#D0372D;}
     opacity: 0.5;
 }
 
+.back_butt a{
+    background: #032339;
+    rotate: z -31deg;
+    font-size: 28px;
+    position: fixed;
+    bottom: 3.14%;
+    left: -0.314%;
+}
+.back_butt a:hover{
+    text-decoration: none;
+    opacity: 0.5;
+}
+
 hr{
     border-color: #50c484;
     @media(prefers-color-scheme: light){
